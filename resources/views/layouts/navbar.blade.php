@@ -4,14 +4,12 @@
         <nav class="navbar flex justify-between bg-black text-white items-center px-[2vw]  pt-[10px] w-screen">
           <a class="hover:bg-jms-blue rounded scale-[.85] p-[5px] ">
               <div class="inline-block sm:flex justify-center">
-                <h1 class="text-xl sm:text-2xl">Esam&nbsp;</h1>
-                <p> </p>
-                <h1 class="text-xl sm:text-2xl ">Khalid</h1>
+                <h1 class="text-xl sm:text-2xl">HiveMind&nbsp;</h1>
               </div>
 
           <ul class="text-center list-none inline-flex  ">
-            <a>About Me</a>
-            <a>Projects</a>
+            <li>About Me</li>
+            <li>Projects</li>
           </ul>
           <div class="NavLogoContainer sm:flex justify-between">
             <Link
@@ -24,6 +22,7 @@
               <FaGithub class="NavLogo" />
             </Link>
           </div>
+          
         </nav>
         
       </div>

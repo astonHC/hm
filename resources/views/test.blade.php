@@ -5,7 +5,7 @@
 </head>
 <body>
     @include('layouts.navbar')
-    <p class="text-9xl text-red-500">Hello World!</p>
+    <p class="text-9xl text-red-500">Test</p>
     <div class="custom-diagonal-white-right-static"></div>
-    <a href="{{ route('test') }}">Click Here</a>
+    <a href="{{ route('test') }}"></a>
 </body>
