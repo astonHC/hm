@@ -10,4 +10,9 @@ class TestController extends Controller
     {
         return view('test');
     }
+
+    public function chungus()
+    {
+        return view('test/chungus');
+    }
 }
