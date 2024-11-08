@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <body>
     <div class="overflow-hidden">
-        <nav class="navbar flex justify-between bg-black text-white items-center px-[2vw]  pt-[10px] w-screen">
-          <a class="hover:bg-jms-blue rounded scale-[.85] p-[5px] ">
-              <div class="inline-block sm:flex justify-center">
-                <h1 class="text-xl sm:text-2xl">HiveMind&nbsp;</h1>
-              </div>
-
-          <ul class="text-center list-none inline-flex  ">
-            <li>About Me</li>
-            <li>Projects</li>
-          </ul>
-          <div class="NavLogoContainer sm:flex justify-between">
-            <Link
-              target="_blank"
-              href="https://www.linkedin.com/in/esam-khalid-49648728b/"
+        <nav
+            class="navbar flex justify-between bg-black text-white items-center px-[2vw] pt-[10px] w-screen"
+        >
+            <a
+                class="flex align-middle hover:bg-jms-blue rounded scale-[.85] p-[5px]"
             >
-              <FaLinkedin class="NavLogo" />
-            </Link>
-            <Link target="_blank" href="https://github.com/EsamKhalid">
-              <div class="NavLogo fab fa-github"></div>
-            </Link>
-          </div>
-          
+                <img
+                    src="{{ asset('Images\HiveMind Logo.png') }}"
+                    alt="logo"
+                    class="size-[50px]"
+                />
+                <div class="inline-block sm:flex justify-center">
+                    <h1 class="text-5xl border-corners-md">HiveMind&nbsp;</h1>
+                </div>
+            </a>
+            <ul class="text-center list-none inline-flex">
+                <li class="flex justify-center size-full">About Me</li>
+                <li class="flex justify-center size-full">Projects</li>
+            </ul>
+
+            <div class="NavLogoContainer sm:flex justify-between">
+                <a><div class="NavLogo fab fa-linkedin"></div></a>
+                <a><div class="NavLogo fab fa-github"></div></a>
+            </div>
         </nav>
-        
-      </div>
+        <div class="cdw-right"></div>
+    </div>
 </body>
