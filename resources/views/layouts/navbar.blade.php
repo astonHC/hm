@@ -19,7 +19,7 @@
               <FaLinkedin class="NavLogo" />
             </Link>
             <Link target="_blank" href="https://github.com/EsamKhalid">
-              <FaGithub class="NavLogo" />
+              <div class="NavLogo fab fa-github"></div>
             </Link>
           </div>
           
