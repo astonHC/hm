@@ -9,10 +9,15 @@
 }
 
 
-*{
-  @apply font-Blender-Pro-Book
+
+@font-face {
+  font-family: Montserrat;
+  src: url(/public/fonts/Montserrat-Regular.ttf)
 }
 
+*{
+    @apply font-Montserrat
+}
 
 
 

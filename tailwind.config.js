@@ -18,6 +18,7 @@ export default {
                 "Blender-Pro-Heavy": ["Blender-Pro-Heavy"],
                 "Blender-Pro-Book": ["Blender-Pro-Book"],
                 Nemesys: ["nemesys"],
+                Montserrat: ["montserrat"],
             },
             colors: {
                 "cybpnk-grey": "#21201f",

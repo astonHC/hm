@@ -8,14 +8,9 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/test', function () {
-    return view('test');
-});
-
-
 
 Route::get('test', [TestController::class, 'test'])->name('test');
-Route::get('chungus', [TestController::class, 'chungus'])->name('test');
+Route::get('chungus', [TestController::class, 'chungus'])->name('chungus');
 
 
 
