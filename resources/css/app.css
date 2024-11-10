@@ -38,7 +38,7 @@ body {
 @layer components {
     .navbar ul li {
         transition-duration: 200ms;
-        @apply text-sm mr-[25px] sm:mr-[20px] cursor-pointer hover:bg-jms-blue hover:border-corners-sm 
+        @apply text-sm rounded mr-[25px] sm:mr-[20px] cursor-pointer hover:bg-jms-blue 
     md:p-5 sm:text-xl md:text-2xl p-1;
     }
 
@@ -184,6 +184,35 @@ body {
         );
         background-size: 40px 40px;
         @apply bg-black w-full h-[25px];
+    }
+    .cdwa-right {
+        background-image: linear-gradient(
+            135deg,
+            transparent 25%,
+            transparent 40%,
+            white 25%,
+            white 50%,
+            transparent 50%,
+            transparent 90%,
+            white 75%
+        );
+        background-size: 40px 40px;
+        @apply bg-amber w-full h-[25px];
+    }
+
+    .cdb-right {
+        background-image: linear-gradient(
+            135deg,
+            transparent 25%,
+            transparent 40%,
+            black 25%,
+            black 50%,
+            transparent 50%,
+            transparent 90%,
+            black 75%
+        );
+        background-size: 40px 40px;
+        @apply bg-[#fbbf24] w-full h-[25px]  border-black;
     }
 
     .gradient-test {
