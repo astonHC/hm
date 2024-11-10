@@ -6,7 +6,7 @@
         >
             <a
                 href="{{ route('home') }}"
-                class="flex align-middle hover:bg-jms-blue rounded scale-[.85] p-[5px]"
+                class="flex align-middle hover:bg-ghost-white hover:text-night duration-200 rounded scale-[.85] p-[5px]"
             >
                 <img
                     src="{{ asset('../Images/HiveMind Logo.png') }}"

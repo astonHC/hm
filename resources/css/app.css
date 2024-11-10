@@ -38,7 +38,7 @@ body {
 @layer components {
     .navbar ul li {
         transition-duration: 200ms;
-        @apply text-sm rounded mr-[25px] sm:mr-[20px] cursor-pointer hover:bg-jms-blue 
+        @apply text-sm rounded mr-[25px] sm:mr-[20px] cursor-pointer hover:bg-ghost-white hover:text-night
     md:p-5 sm:text-xl md:text-2xl p-1;
     }
 
@@ -102,7 +102,7 @@ body {
         --g: 7.5px; /* the gap between the border and image */
 
         padding: calc(var(--g) + var(--t));
-        outline: var(--t) solid white; /* the color here */
+        outline: var(--t) solid black; /* the color here */
         outline-offset: calc(-1 * var(--t));
         mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
                 calc(100% - var(--s)) calc(100% - var(--s)),
