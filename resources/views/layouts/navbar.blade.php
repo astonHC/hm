@@ -2,9 +2,10 @@
 <body>
     <div class="overflow-hidden">
         <nav
-            class="navbar flex justify-between bg-black text-white items-center px-[2vw] pt-[10px] w-screen"
+            class="navbar flex justify-between bg-amber text-white items-center px-[2vw] pt-[10px] w-screen"
         >
             <a
+                href="{{ route('home') }}"
                 class="flex align-middle hover:bg-jms-blue rounded scale-[.85] p-[5px]"
             >
                 <img

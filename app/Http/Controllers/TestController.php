@@ -11,8 +11,7 @@ class TestController extends Controller
         return view('test');
     }
 
-    public function chungus()
-    {
-        return view('test/chungus');
+    public function home(){
+        return view('home');
     }
 }

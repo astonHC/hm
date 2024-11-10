@@ -5,7 +5,7 @@
     </head>
     <body>
         @include('layouts.navbar')
-        <p class="text-9xl text-red-500">Hello World!</p>
+        <p class="text-6xl">Welcome To HiveMind</p>
         <a href="{{ route('test') }}">Click Here</a>
     </body>
 </html>

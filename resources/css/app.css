@@ -26,7 +26,7 @@
 
 body {
     color: rgb(var(--foreground-rgb));
-    @apply bg-black text-white;
+    @apply bg-ghost-white text-raisin-black;
 }
 
 @layer utilities {

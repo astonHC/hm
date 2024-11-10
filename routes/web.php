@@ -10,7 +10,8 @@ Route::get('/', function () {
 
 
 Route::get('test', [TestController::class, 'test'])->name('test');
-Route::get('chungus', [TestController::class, 'chungus'])->name('chungus');
+
+Route::get('home', [TestController::class, 'home'])->name('home');
 
 
 
