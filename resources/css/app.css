@@ -1,0 +1,271 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: blender-pro-book;
+    src: url(/public/fonts/BlenderPro-Book.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(/public/fonts/Montserrat-Regular.ttf);
+}
+
+* {
+    @apply font-Montserrat;
+}
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    @apply bg-ghost-white text-raisin-black;
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+@layer components {
+    .navbar ul li {
+        transition-duration: 200ms;
+        @apply text-sm rounded mr-[25px] sm:mr-[20px] cursor-pointer hover:bg-ghost-white hover:text-night
+    md:p-5 sm:text-xl md:text-2xl p-1;
+    }
+
+    /* .navbar ul li {
+    @apply text-sm  cursor-pointer hover:bg-jms-blue
+  } */
+
+    .NavLogoContainer a {
+        @apply hover:bg-jms-blue m-[5px] flex items-center justify-center hover:border-corners-sm
+    cursor-pointer duration-200
+    size-[30px]
+    sm:size-[50px];
+    }
+
+    .NavLogoContainer a > * {
+        @apply size-[25px] sm:size-[35px];
+    }
+
+    .border-corners-lg {
+        --s: 50px; /* the size on the corner */
+        --t: 4px; /* the thickness of the border */
+        --g: 10px; /* the gap between the border and image */
+
+        padding: calc(var(--g) + var(--t));
+        outline: var(--t) solid white; /* the color here */
+        outline-offset: calc(-1 * var(--t));
+        mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+                calc(100% - var(--s)) calc(100% - var(--s)),
+            linear-gradient(#000 0 0) content-box;
+    }
+
+    .border-corners-sm {
+        --s: 9px; /* the size on the corner */
+        --t: 2px; /* the thickness of the border */
+        --g: 5px; /* the gap between the border and image */
+
+        padding: calc(var(--g) + var(--t));
+        outline: var(--t) solid white; /* the color here */
+        outline-offset: calc(-1 * var(--t));
+        mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+                calc(100% - var(--s)) calc(100% - var(--s)),
+            linear-gradient(#000 0 0) content-box;
+    }
+
+    .border-corners {
+        --s: 9px; /* the size on the corner */
+        --t: 2px; /* the thickness of the border */
+        --g: 0px; /* the gap between the border and image */
+
+        padding: calc(var(--g) + var(--t));
+        outline: var(--t) solid white; /* the color here */
+        outline-offset: calc(-1 * var(--t));
+        mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+                calc(100% - var(--s)) calc(100% - var(--s)),
+            linear-gradient(#000 0 0) content-box;
+    }
+
+    .border-corners-md {
+        --s: 15px; /* the size on the corner */
+        --t: 3px; /* the thickness of the border */
+        --g: 7.5px; /* the gap between the border and image */
+
+        padding: calc(var(--g) + var(--t));
+        outline: var(--t) solid black; /* the color here */
+        outline-offset: calc(-1 * var(--t));
+        mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+                calc(100% - var(--s)) calc(100% - var(--s)),
+            linear-gradient(#000 0 0) content-box;
+    }
+
+    .passTest {
+        width: var(--t);
+    }
+
+    .custom-diagonal-yellow {
+        background-image: linear-gradient(
+            135deg,
+            transparent 25%,
+            transparent 40%,
+            #fbbf24 25%,
+            #fbbf24 50%,
+            transparent 50%,
+            transparent 90%,
+            #fbbf24 75%
+        );
+        background-size: 40px 40px;
+    }
+
+    .custom-diagonal-white-right-animated {
+        background-image: linear-gradient(
+            135deg,
+            transparent 25%,
+            transparent 40%,
+            white 25%,
+            white 50%,
+            transparent 50%,
+            transparent 90%,
+            white 75%
+        );
+        background-size: 40px 40px;
+        @apply bg-black;
+    }
+
+    .custom-diagonal-white-right-static {
+        background-image: linear-gradient(
+            135deg,
+            transparent 25%,
+            transparent 40%,
+            white 25%,
+            white 50%,
+            transparent 50%,
+            transparent 90%,
+            white 75%
+        );
+        background-size: 40px 40px;
+        @apply bg-black w-full h-[25px];
+    }
+
+    .custom-diagonal-white-left {
+        background-image: linear-gradient(
+            45deg,
+            transparent 25%,
+            transparent 40%,
+            white 25%,
+            white 50%,
+            transparent 50%,
+            transparent 90%,
+            white 75%
+        );
+        background-size: 40px 40px;
+    }
+
+    .cdw-right {
+        background-image: linear-gradient(
+            135deg,
+            transparent 25%,
+            transparent 40%,
+            white 25%,
+            white 50%,
+            transparent 50%,
+            transparent 90%,
+            white 75%
+        );
+        background-size: 40px 40px;
+        @apply bg-black w-full h-[25px];
+    }
+    .cdwa-right {
+        background-image: linear-gradient(
+            135deg,
+            transparent 25%,
+            transparent 40%,
+            white 25%,
+            white 50%,
+            transparent 50%,
+            transparent 90%,
+            white 75%
+        );
+        background-size: 40px 40px;
+        @apply bg-amber w-full h-[25px];
+    }
+
+    .cdb-right {
+        background-image: linear-gradient(
+            135deg,
+            transparent 25%,
+            transparent 40%,
+            black 25%,
+            black 50%,
+            transparent 50%,
+            transparent 90%,
+            black 75%
+        );
+        background-size: 40px 40px;
+        @apply bg-[#fbbf24] w-full h-[25px]  border-black;
+    }
+
+    .gradient-test {
+        background-image: linear-gradient(
+            135deg,
+            transparent 25%,
+            transparent 40%,
+            white 25%,
+            white 50%,
+            transparent 50%,
+            transparent 90%,
+            white 75%
+        );
+        background-size: 50px 50px;
+    }
+
+    .inhe:hover #default {
+        @apply hidden;
+    }
+
+    .inhe:hover #hover {
+        @apply block;
+    }
+
+    .inhe:hover #hiddenIcon {
+        @apply visible;
+    }
+
+    .carouselBtn {
+        @apply block absolute top-0 bottom-0 -m-2  p-[1rem] transition duration-100 ease-in-out rounded;
+    }
+
+    .carouselBtn:hover {
+        @apply scale-[1.5] transition duration-200 ease-in-out;
+    }
+
+    .carouselBtn > * {
+        @apply w-[1.5rem] h-[1.5rem];
+    }
+
+    .logoTextCenter {
+        display: flex;
+        align-items: center;
+    }
+
+    #socials {
+        @media (min-width: 360px) {
+            display: none;
+        }
+    }
+
+    .projectFlex {
+        transition: 200ms ease-in-out;
+        @apply hover:flex-[6] hover:cursor-pointer;
+    }
+}
