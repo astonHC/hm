@@ -15,19 +15,23 @@ class TestController extends Controller
         return view('home');
     }
 
-    public function beauty(){
-        return view('beauty.beauty');
+    public function contact(){
+        return view('contact.contact');
     }
 
-    public function health(){
-        return view('health.health');
-    }
-    public function clothing(){
-        return view('clothing.clothing');
+    public function products(){
+        return view('products.products');
     }
 
     public function about(){
         return view('about.about');
     }
 
+    public function account(){
+        return view('user.account');
+    }
+
+    public function basket(){
+        return view('basket.basket');
+    }
 }

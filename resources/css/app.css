@@ -47,8 +47,8 @@ body {
   } */
 
     .NavLogoContainer a {
-        @apply hover:bg-jms-blue m-[5px] flex items-center justify-center hover:border-corners-sm
-    cursor-pointer duration-200
+        @apply hover:bg-ghost-white m-[5px] flex items-center justify-center 
+    cursor-pointer duration-200 rounded
     size-[30px]
     sm:size-[50px];
     }

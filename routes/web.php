@@ -13,9 +13,13 @@ Route::get('test', [TestController::class, 'test'])->name('test');
 
 Route::get('home', [TestController::class, 'home'])->name('home');
 
-Route::get('beauty', [TestController::class, 'beauty'])->name('beauty');
-Route::get('health', [TestController::class, 'health'])->name('health');
-Route::get('clothing', [TestController::class, 'clothing'])->name('clothing');
+Route::get('products', [TestController::class, 'products'])->name('products');
+Route::get('contact', [TestController::class, 'contact'])->name('contact');
+
+Route::get('account', [TestController::class, 'account'])->name('account');
+
+Route::get('basket', [TestController::class, 'basket'])->name('basket');
+
 Route::get('about', [TestController::class, 'about'])->name('about');
 
 

@@ -5,6 +5,6 @@
     </head>
     <body>
         @include('layouts.navbar')
-        <p class="text-6xl">Health</p>
+        <p class="text-6xl">Contact</p>
     </body>
 </html>

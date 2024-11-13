@@ -5,6 +5,6 @@
     </head>
     <body>
         @include('layouts.navbar')
-        <p class="text-6xl">Clothing</p>
+        <p class="text-6xl">Products</p>
     </body>
 </html>
