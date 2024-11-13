@@ -26,4 +26,8 @@ class TestController extends Controller
         return view('clothing.clothing');
     }
 
+    public function about(){
+        return view('about.about');
+    }
+
 }

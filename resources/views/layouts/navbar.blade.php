@@ -2,7 +2,7 @@
 <body>
     <div class="overflow-hidden">
         <nav
-            class="navbar flex justify-between bg-amber text-white items-center px-[2vw] pt-[10px] w-screen"
+            class="navbar flex justify-between bg-amber text-white items-center pr-[2vw] pt-[10px] w-screen"
         >
             <a
                 href="{{ route('home') }}"
@@ -18,15 +18,25 @@
                 </div>
             </a>
             <ul class="text-center list-none inline-flex">
-                <li class="flex justify-center size-full"><a href="{{route('home')}}">Home</a></li>
-                <li class="flex justify-center size-full"><a href="{{route('beauty')}}">Beauty</a></li>
-                <li class="flex justify-center size-full"><a href="{{route('health')}}">Health</a></li>
-                <li class="flex justify-center size-full"><a href="{{route('clothing')}}">Clothing</a></li>
+                <li class="flex justify-center size-full">
+                    <a href="{{ route('beauty') }}">Beauty</a>
+                </li>
+                <li class="flex justify-center size-full">
+                    <a href="{{ route('health') }}">Health</a>
+                </li>
+                <li class="flex justify-center size-full">
+                    <a href="{{ route('clothing') }}">Clothing</a>
+                </li>
+                <li class="flex justify-center size-full text-nowrap">
+                    <a href="{{ route('about') }}">About Us</a>
+                </li>
             </ul>
-
-            <div class="NavLogoContainer sm:flex justify-between">
+            <div>
+                <div class="fas fa-shopping-basket fa-2xl"></div>
+                <div class="far fa-user fa-solid fa-2xl"></div>
+                <div class="fas fa-search fa-2xl"></div>
             </div>
         </nav>
-        <div class="cdwa-right h-[20px]  w-screen"></div>
+        <div class="cdwa-right h-[20px] w-screen border-b-2 border-amber"></div>
     </div>
 </body>
