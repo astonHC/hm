@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 <body>
     <div class="overflow-hidden">
         <nav
@@ -11,10 +14,12 @@
                 <img
                     src="{{ asset('../Images/HiveMind Logo.png') }}"
                     alt="logo"
-                    class="size-[100px] mr-10"
+                    class="size-[75px] md:size-[100px] mr-10"
                 />
-                <div class="inline-block sm:flex justify-center ">
-                    <h1 class="text-5xl border-corners-md ">HiveMind&nbsp;</h1>
+                <div class="inline-block sm:flex justify-center">
+                    <h1 class="text-2xl md:text-5xl border-corners-md">
+                        HiveMind&nbsp;
+                    </h1>
                 </div>
             </a>
             <ul class="text-center list-none inline-flex">
@@ -28,11 +33,44 @@
                     <a href="{{ route('contact') }}">Contact Us</a>
                 </li>
             </ul>
-            <div class="logoTextCenter NavLogoContainer">
-                <a href="{{route('basket')}}" class="fas fa-shopping-basket fa-2xl"></a>
-                <a href="{{route('account')}}" class="far fa-user fa-solid fa-2xl"></a>
+            <div class="logoTextCenter NavLogoContainer flex">
+                <input
+                    type="text"
+                    placeholder="Search"
+                    class="rounded-md p-1 text-black hidden md:flex"
+                />
+                <a
+                    href="{{ route('account') }}"
+                    class="far fa-search fa-solid fa-2xl"
+                ></a>
+                <a
+                    href="{{ route('basket') }}"
+                    class="fas fa-shopping-basket fa-2xl"
+                ></a>
+                <a
+                    href="{{ route('account') }}"
+                    class="far fa-user fa-solid fa-2xl"
+                ></a>
             </div>
         </nav>
-        <div class="cdwa-right h-[20px] w-screen border-b-2 border-amber"></div>
+    </div>
+    <div class="categories w-screen">
+        <ul class="list-none flex justify-between mt-1 mx-1">
+            <li>
+                <p>SkinCare</p>
+            </li>
+            <li>
+                <p>Health</p>
+            </li>
+            <li>
+                <p>Beauty</p>
+            </li>
+            <li>
+                <p>Haircare</p>
+            </li>
+            <li>
+                <p>Merch</p>
+            </li>
+        </ul>
     </div>
 </body>
