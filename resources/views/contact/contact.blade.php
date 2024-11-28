@@ -5,18 +5,17 @@
     </head>
     <body class="text-center">
         @include('layouts.navbar')
-        <!-- <div class="flex justify-center"><p class="text-6xl">Contact</p></div> -->
 
         <div class="hero bg-yellow-50 text-center py-16">
             <h1 class="text-4xl font-bold text-orange-950">Get in Touch</h1>
             <p class="text-lg text-gray-600 mt-4"> 
-                Want to get in touch? We'd be buzzing to hear from you (get it?). Here's how you can reach us...
+                Want to get in touch? We'd be buzzing (get it?) to hear from you. Here's how you can reach us...
             </p>
         </div>
 
             <!-- contact details -->
                 <div class="contact-options grid grid-cols-1 md:grid-cols-2 gap-6 p-8 bg-white">
-                    <!-- Card 1: contact options -->
+                    <!-- card 1: contact options -->
                     <div class="card bg-yellow-50 p-6 rounded-lg shadow-md text-center">
                         <div class="icon text-3xl text-blue-600 mb-4">📞</div>
                         <h2 class="text-xl font-bold mb-2">Contact Us</h2>
@@ -27,24 +26,24 @@
                         <a href="mailto:hivemind.business@outlook.com" class="text-orange-900">hivemind.business@outlook.com</a>
                     </div>
 
-                    <!-- Card 2: Contact Form -->
+                    <!-- card 2: contact form -->
                     <div class="card bg-yellow-50 p-6 rounded-lg shadow-md text-center">
                         <div class="icon text-3xl text-green-600 mb-4">✉️</div>
                         <h2 class="text-xl font-bold mb-2">Online Enquiry</h2>
                         <p class="text-gray-600 mb-4">Fill out the form below, and we'll get back to you as soon as possible.</p>
                         
-                        <!-- Contact Form -->
+                        <!-- contact form -->
                         <form action="/submit-form" method="POST" id="contact-us-form">
-                            <!-- Name -->
+                            <!-- name -->
                             <input type="text" name="name" placeholder="Your Name" class="w-full p-3 mb-4 border border-gray-300 rounded" required>
 
-                            <!-- Email -->
+                            <!-- email -->
                             <input type="email" name="email" placeholder="Your Email" class="w-full p-3 mb-4 border border-gray-300 rounded" required>
 
-                            <!-- Message -->
+                            <!-- message -->
                             <textarea name="message" placeholder="Your Message" class="w-full p-3 mb-4 border border-gray-300 rounded" rows="4" required></textarea>
 
-                            <!-- Submit Button -->
+                            <!-- submit button -->
                             <button type="submit" class="bg-yellow-400 text-white py-2 px-6 rounded-md hover:bg-yellow-500">Submit</button>
                         </form>
                     </div>
@@ -70,28 +69,28 @@
                         const popup = document.getElementById('popup');
                         const closePopup = document.getElementById('closePopup');
 
-                        // Function to open the popup
+                        // function to open the popup
                         function openPopup() {
                             popupOverlay.classList.remove('hidden');
                             popup.classList.remove('hidden');
                         }
 
-                        // Function to close the popup
+                        // function to close the popup
                         function closePopupFunc() {
                             popupOverlay.classList.add('hidden');
                             popup.classList.add('hidden');
                         }
 
-                        // Handle form submission
+                        // handle form submission
                         form.addEventListener('submit', function (event) {
-                            event.preventDefault(); // Prevent default form submission
-                            openPopup(); // Open the popup
+                            event.preventDefault(); // prevent default form submission
+                            openPopup(); // open the popup
                         });
 
-                        // Close popup on close button click
+                        // close popup on close button click
                         closePopup.addEventListener('click', closePopupFunc);
 
-                        // Close popup when clicking on the overlay
+                        // close popup when clicking on the overlay
                         popupOverlay.addEventListener('click', function (event) {
                             if (event.target === popupOverlay) {
                                 closePopupFunc();
