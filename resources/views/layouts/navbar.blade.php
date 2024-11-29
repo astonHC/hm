@@ -54,23 +54,4 @@
             </div>
         </nav>
     </div>
-    <div class="categories w-screen">
-        <ul class="list-none flex justify-between mt-1 mx-1">
-            <li>
-                <p>SkinCare</p>
-            </li>
-            <li>
-                <p>Health</p>
-            </li>
-            <li>
-                <p>Beauty</p>
-            </li>
-            <li>
-                <p>Haircare</p>
-            </li>
-            <li>
-                <p>Merch</p>
-            </li>
-        </ul>
-    </div>
 </body>

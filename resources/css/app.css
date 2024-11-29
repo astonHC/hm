@@ -49,7 +49,7 @@ body {
 
     .categories ul li {
         transition-duration: 200ms;
-        @apply text-xl rounded mx-[2px] h-[60px] cursor-pointer hover:bg-ghost-white hover:text-night p-1 bg-amber w-screen text-center hover:border-amber hover:border;
+        @apply text-xl rounded mx-[2px] h-[100px] cursor-pointer hover:bg-ghost-white hover:text-night p-1 bg-amber w-screen text-center hover:border-amber hover:border;
     }
 
     /* .navbar ul li {

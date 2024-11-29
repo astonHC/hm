@@ -6,7 +6,27 @@
     <body>
         @include('layouts.navbar')
 
-        <p class="m-[10px] text-6xl">Welcome To HiveMind</p>
-        <p>We are an eco-friendly Beauty and SkinCare company</p>
+        <div class="flex justify-center my-12"><p class="m-[10px] text-6xl">Welcome To HiveMind</p></div>
+        
+    </div>
+    <div class="categories w-screen">
+        <ul class="list-none flex justify-between mt-1 mx-4">
+            <li>
+                <p>SkinCare</p>
+            </li>
+            <li>
+                <p>Health</p>
+            </li>
+            <li>
+                <p>Beauty</p>
+            </li>
+            <li>
+                <p>Haircare</p>
+            </li>
+            <li>
+                <p>Merch</p>
+            </li>
+        </ul>
+    </div>
     </body>
 </html>
