@@ -13,16 +13,16 @@
                 <h1 class="text-2xl font-bold">HiveMind</h1>
             </a>
 
-            <!-- navigation links -->
-            <!-- still need to make them closer to the icons on the right tho... -->
-            <ul class="hidden md:flex space-x-8 text-lg">
-                <li><a href="{{ route('products') }}" class="hover:text-gray-200 transition">Shop Us</a></li>
-                <li><a href="{{ route('about') }}" class="hover:text-gray-200 transition">About Us</a></li>
-                <li><a href="{{ route('contact') }}" class="hover:text-gray-200 transition">Contact Us</a></li>
-            </ul>
-
             <!-- icons section -->
             <div class="flex space-x-4 items-center">
+                <!-- navigation links -->
+                <!-- links are next to icons -->
+                <ul class="hidden md:flex space-x-8 text-lg">
+                    <li><a href="{{ route('products') }}" class="hover:text-gray-200 transition">Shop Us</a></li>
+                    <li><a href="{{ route('about') }}" class="hover:text-gray-200 transition">About Us</a></li>
+                    <li><a href="{{ route('contact') }}" class="hover:text-gray-200 transition">Contact Us</a></li>
+                </ul>
+
                 <a href="{{ route('basket') }}" class="fas fa-shopping-basket fa-xl hover:text-gray-200 transition"></a>
                 <a href="{{ route('account') }}" class="fas fa-user fa-xl hover:text-gray-200 transition"></a>
             </div>

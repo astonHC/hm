@@ -52,9 +52,8 @@ body {
 
     .navbar ul {
         @apply hidden md:flex space-x-8 text-lg; /* show links in a row on medium screens and larger */
-        margin-right: 0; /* removing any right margin */
-        padding-right: 0; /* removing any right padding */
     }
+
     .navbar ul li a {
         @apply hover:text-gray-200 transition; /* hover effect */
     }
