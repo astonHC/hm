@@ -3,6 +3,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('home');
@@ -21,5 +22,9 @@ Route::get('account', [TestController::class, 'account'])->name('account');
 Route::get('basket', [TestController::class, 'basket'])->name('basket');
 
 Route::get('about', [TestController::class, 'about'])->name('about');
+
+
+Route::get('list',[UserController::class,'list'])->name('list_user');
+Route::get('show/{id}', [UserController::class,'show']);
 
 
