@@ -290,4 +290,58 @@ body {
     #main:hover {
         @apply bg-black;
     }
+
+    .wrapper {
+        background-color: #e1e2e2;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .wrapper:before,
+    .wrapper:after {
+        content: "";
+        position: absolute;
+        height: 130px;
+        width: 150px;
+        z-index: 2;
+    }
+
+    .wrapper:after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+
+    .wrapper:before {
+        left: 0;
+        top: 0;
+    }
+
+    .wrapper .track {
+        display: flex;
+        width: calc(150px * 10);
+        animation: scroll 15s 0.5s linear infinite;
+    }
+
+    .wrapper .logo {
+        width: 500px;
+    }
+
+    .wrapper .logo img {
+        @apply size-fit;
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(-150px * 5));
+        }
+    }
 }

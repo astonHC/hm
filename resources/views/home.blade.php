@@ -28,5 +28,26 @@
             </li>
         </ul>
     </div>
+    <div class="wrapper">
+        <div class="track">
+            <div class="logo">
+                <img src="{{ asset('../Images/placeholder.avif') }}"/>
+            </div>
+            <div class="logo">
+                <img src="{{ asset('../Images/placeholder.avif') }}"/>
+            </div>
+            <div class="logo">
+                <img src="{{ asset('../Images/placeholder.avif') }}"/>
+            </div>
+            <div class="logo">
+                <img src="{{ asset('../Images/placeholder.avif') }}"/>
+            </div>
+            <div class="logo">
+                <img src="{{ asset('../Images/placeholder.avif') }}"/>
+            </div>
+            
+            </div>
+        </div>
+    </div>
     </body>
 </html>
