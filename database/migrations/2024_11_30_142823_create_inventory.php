@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('inventory', function (Blueprint $table) {
-            $table->id();
-            $table->string('invetory_id');
-            $table->string('product_id');
-            $table->string('quantity');
-            $table->string('reorder_level');
+        Schema::create('stock', function (Blueprint $table) {
+            $table->id('stock_id');
+            $table->unsignedBigInteger('product_id');
+            $table->integer('quantity')->default(0);
+            $table->integer('reorder_level');
             $table->timestamps();
+
+            $table->foreign('product_id')->references('product_id')->on('products');
         });
     }
 
