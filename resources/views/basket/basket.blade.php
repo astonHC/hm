@@ -18,9 +18,11 @@
     }
     function getTotal() {
         const checkedElements = document.getElementsByClassName('isinOrder');
-        let count = 0
+        let count = 0;
         var sum = 0;
+        let itemcount = 0;
         for (let e of checkedElements) {
+            
             count += 1
             if (count == 0) {
                 document.getElementById('total').innerText = "£0.00";
@@ -31,13 +33,13 @@
 
                     let price = parseFloat(priceText.substring(1));
                     let quantity = parseInt(quantityText);
-
+                    itemcount += quantity
                     sum += price * quantity;
                     document.getElementById('total').innerText = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(sum);
+                    document.getElementById('count').innerText = " " + itemcount.toString()
                     console.log(sum)
                     console.log(quantity)
                     console.log(price)
-
                 }
             }
         }
@@ -52,9 +54,9 @@
 
     <div class="flex flex-wrap lg:flex-nowrap">
         <div id="basket-items-wrapper"
-            class="min-w-[700px] w-[100%] bg-yellow-300 text-3xl text-white rounded-lg p-10 ml-10 mt-10 md:w-[80%]">
+            class="min-w-[700px] w-[100%] bg-yellow-300 text-3xl text-white rounded-lg p-10 m-10 mt-10 lg:w-[80%]">
             <p class="text-6xl mt-10 mb-10">Basket</p>
-            <ul id="items" class="">
+            <ul id="items" >
                 <li class="bg-amber rounded-lg mb-10 p-10 flex justify-between">
                     <div class="item-img-text-link"><a><img />item</a></div>
                     <!-- FORM FOR QTY BUTTONS -->
@@ -94,14 +96,14 @@
                     </form>
                 </li>
                 <li class="bg-amber rounded-lg mb-10 p-10 flex justify-between items-center xs:p-0">
-                    <span class="item-img-text-link flex text-wrap"><img class="w-[100px] h-[100px]"
+                    <span class="item-img-text-link flex text-wrap mr-10"><img class="w-[100px] h-[100px]"
                             src="https://www.kurin.com/wp-content/uploads/placeholder-square-300x300.jpg" width="130px"
                             height="130px" alt="IMAGE" />
                         <div class="ml-3 max-w-[50%]"><a class="text-2xl">ItemNamePlaceHolder</a>
-                            <p id="item-description" class="text-xs leading-5">item description - Lorem ipsum dolor sit
+                            <p id="item-description" class="text-base leading-5">item description - Lorem ipsum dolor sit
                                 amet, consectetur adipiscing elit. In eu commodo neque. Duis ut dui non arcu mollis
                                 vehicula et nec orci.</p>
-                            <p id="item-price" class="text-base font-bold leading-9">£33.33</p>
+                            <p id="item-price" class="text-base font-bold leading-9">£12.99</p>
                         </div>
                     </span>
                     <!-- FORM FOR QTY BUTTONS -->
@@ -147,7 +149,7 @@
                             src="https://www.kurin.com/wp-content/uploads/placeholder-square-300x300.jpg" width="130px"
                             height="130px" alt="IMAGE" />
                         <div class="ml-3 max-w-[50%]"><a class="text-2xl">ItemNamePlaceHolder</a>
-                            <p id="item-description" class="text-xs leading-5">item description - Lorem ipsum dolor sit
+                            <p id="item-description" class="text-base leading-5">item description - Lorem ipsum dolor sit
                                 amet, consectetur adipiscing elit. In eu commodo neque. Duis ut dui non arcu mollis
                                 vehicula et nec orci.</p>
                             <p id="item-price" class="text-base font-bold leading-9">£33.33</p>
@@ -194,13 +196,14 @@
             </ul>
         </div>
         <div
-            class=" bg-yellow-300 text-3xl text-white rounded-lg  ml-5 mt-10 mr-5 flex-wrap min-w[160px] w-max lg:flex-nowrap lg:p-10">
+            class=" bg-yellow-300 text-3xl text-white rounded-lg  ml-5 mt-10 mr-5 mb-10 flex-wrap min-w[160px] w-[100%] lg:w-max md:flex-nowrap md:p-10 lg:relative ">
             <div class="ml-5 mt-10">
+                <p>Items in basket:<span id="count"> </span></p>
                 <p>Total:</p>
                 <span id="total"></span>
             </div>
 
-            <button class="bg-amber rounded-lg mb-10 p-4 mr-5 ml-5 mt-10 text-base w-max"> GO TO
+            <button class="bg-amber rounded-lg mb-10 p-4 mr-5 ml-5 mt-10 w-full h-56 lg:h-24 text-7xl lg:text-3xl "> GO TO
                 CHECKOUT</button>
 
         </div>
