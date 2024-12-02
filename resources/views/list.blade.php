@@ -6,7 +6,6 @@
             <th>Last Name</th>
             <th>Email Address</th>
             <th>Phone Number</th>
-            <th>Address ID</th>
             <th>Password</th>
             <th>Permission Level</th>
         </tr>
@@ -19,7 +18,6 @@
             <td>{{$user->last_name}}</td>
             <td>{{$user->email_address}}</td>
             <td>{{$user->phone_number}}</td>
-            <td>{{$user->address_id}}</td>
             <td>{{$user->password}}</td>
             <td>{{$user->permission_level}}</td>
         </tr>
