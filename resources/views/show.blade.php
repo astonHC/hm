@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Account {{ $account->id }}</title>
+        <title>User {{ $user->id }}</title>
     </head>
     <body>
-        <h1>Account no {{ $account->accountno }}</h1>
-        <ul>
-            <li>Balance: {{ $account->balance }}</li>
-            <li>Interest: {{ $account->interest }}</li>
-        </ul>
+        <h1>User first name {{ $user->first_name }}</h1>
+        <h1>User last name {{ $user->last_name }}</h1>
     </body>
 </html>
