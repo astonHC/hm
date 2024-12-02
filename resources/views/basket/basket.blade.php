@@ -40,6 +40,8 @@
                     console.log(sum)
                     console.log(quantity)
                     console.log(price)
+                }else{
+                    count -=1
                 }
             }
         }
