@@ -6,13 +6,13 @@
 </head>
 <script>
 
-    function addOne() {
-        const quantity = document.getElementById("quantity-input")
+    function addOne(id) {
+        const quantity = document.getElementById(`quantity-input-${id}`)
         quantity.value = parseInt(quantity.value) + 1;
         getTotal();
     }
-    function loseOne() {
-        const quantity = document.getElementById("quantity-input")
+    function loseOne(id) {
+        const quantity = document.getElementById(`quantity-input-${id}`)
         quantity.value = Math.max(0, parseInt(quantity.value) - 1);
         getTotal();
     }
@@ -29,7 +29,7 @@
             } else {
                 if (e.checked) {
                     var priceText = e.parentElement.querySelector('#item-price').innerText;
-                    var quantityText = e.parentElement.querySelector('#quantity-input').value;
+                    var quantityText = e.parentElement.querySelector('.quantity-input').value;
 
                     let price = parseFloat(priceText.substring(1));
                     let quantity = parseInt(quantityText);
@@ -75,7 +75,7 @@
                                 </svg>
 
                             </button>
-                            <input type="text" id="quantity-inpot" data-input-counter data-input-counter-min="1"
+                            <input type="text" id="quantity-input" data-input-counter data-input-counter-min="1"
                                 data-input-counter-max="50" aria-describedby="helper-text-explanation"
                                 class="bg-yellow-50 border-x-0 border-yellow-300 h-11 text-center text-yellow-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 dark:bg-yellow-700 dark:border-yellow-600 dark:placeholder-yellow-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="1" value="1" required />
@@ -110,8 +110,8 @@
                     <form class="max-w-xs">
                         <div class="relative flex items-center max-w-[8rem]">
 
-                            <button type="button" onClick="loseOne()" id="decrement-button"
-                                data-input-counter-decrement="quantity-input"
+                            <button type="button" onClick="loseOne('basket-item-1')" id="decrement-button"
+                                data-input-counter-decrement="basket-item-1"
                                 class="w-[40px] bg-yellow-100 dark:bg-yellow-700 dark:hover:bg-yellow-600 dark:border-yellow-600 hover:bg-yellow-200 border border-yellow-300 rounded-s-lg p-3 h-11 focus:ring-yellow-100 dark:focus:ring-yellow-700 focus:ring-2 focus:outline-none">
 
                                 <!-- minus icon -->
@@ -122,14 +122,14 @@
                                 </svg>
 
                             </button>
-                            <input type="text" id="quantity-input" data-input-counter data-input-counter-min="1"
+                            <input type="text" id="quantity-input-basket-item-1" data-input-counter data-input-counter-min="1"
                                 data-input-counter-max="50" aria-describedby="helper-text-explanation"
-                                class="w-[70px] bg-yellow-50 border-x-0 border-yellow-300 h-11 text-center text-yellow-900 text-sm focus:ring-blue-500 focus:border-blue-500 block py-2.5 dark:bg-yellow-700 dark:border-yellow-600 dark:placeholder-yellow-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                class="quantity-input w-[70px] bg-yellow-50 border-x-0 border-yellow-300 h-11 text-center text-yellow-900 text-sm focus:ring-blue-500 focus:border-blue-500 block py-2.5 dark:bg-yellow-700 dark:border-yellow-600 dark:placeholder-yellow-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="1" value="1" required />
 
                             <!-- DATABASE REQUIRED FOR VALUE -->
-                            <button type="button" onClick="addOne() " id="increment-button"
-                                data-input-counter-increment="quantity-input"
+                            <button type="button" onClick="addOne('basket-item-1') " id="increment-button"
+                                data-input-counter-increment="basket-item-1"
                                 class="w-[40px] bg-yellow-100 dark:bg-yellow-700 dark:hover:bg-yellow-600 dark:border-yellow-600 hover:bg-yellow-200 border border-yellow-300 rounded-e-lg p-3 h-11 focus:ring-yellow-100 dark:focus:ring-yellow-700 focus:ring-2 focus:outline-none">
 
                                 <!--plus icon -->
@@ -159,8 +159,8 @@
                     <form class="max-w-xs">
                         <div class="relative flex items-center max-w-[8rem]">
 
-                            <button type="button" onClick="loseOne()" id="decrement-button"
-                                data-input-counter-decrement="quantity-input"
+                            <button type="button" onClick="loseOne('basket-item-2')" id="decrement-button"
+                                data-input-counter-decrement="basket-item-2"
                                 class="w-[40px] bg-yellow-100 dark:bg-yellow-700 dark:hover:bg-yellow-600 dark:border-yellow-600 hover:bg-yellow-200 border border-yellow-300 rounded-s-lg p-3 h-11 focus:ring-yellow-100 dark:focus:ring-yellow-700 focus:ring-2 focus:outline-none">
 
                                 <!-- minus icon -->
@@ -171,14 +171,14 @@
                                 </svg>
 
                             </button>
-                            <input type="text" id="quantity-input" data-input-counter data-input-counter-min="1"
+                            <input type="text" id="quantity-input-basket-item-2" data-input-counter data-input-counter-min="1"
                                 data-input-counter-max="50" aria-describedby="helper-text-explanation"
-                                class="w-[70px] bg-yellow-50 border-x-0 border-yellow-300 h-11 text-center text-yellow-900 text-sm focus:ring-blue-500 focus:border-blue-500 block py-2.5 dark:bg-yellow-700 dark:border-yellow-600 dark:placeholder-yellow-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                class="quantity-input w-[70px] bg-yellow-50 border-x-0 border-yellow-300 h-11 text-center text-yellow-900 text-sm focus:ring-blue-500 focus:border-blue-500 block py-2.5 dark:bg-yellow-700 dark:border-yellow-600 dark:placeholder-yellow-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="1" value="1" required />
 
                             <!-- DATABASE REQUIRED FOR VALUE -->
-                            <button type="button" onClick="addOne() " id="increment-button"
-                                data-input-counter-increment="quantity-input"
+                            <button type="button" onClick="addOne('basket-item-2')" id="increment-button"
+                                data-input-counter-increment="basket-item-2"
                                 class="w-[40px] bg-yellow-100 dark:bg-yellow-700 dark:hover:bg-yellow-600 dark:border-yellow-600 hover:bg-yellow-200 border border-yellow-300 rounded-e-lg p-3 h-11 focus:ring-yellow-100 dark:focus:ring-yellow-700 focus:ring-2 focus:outline-none">
 
                                 <!--plus icon -->
