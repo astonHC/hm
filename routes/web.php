@@ -24,6 +24,10 @@ Route::get('basket', [TestController::class, 'basket'])->name('basket');
 
 Route::get('about', [TestController::class, 'about'])->name('about');
 
+// routes for login page
+// Route::view('/login', 'login.login')->name('login');
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 
 Route::get('list',[UserController::class,'list'])->name('list_user');
 Route::get('show/{id}', [UserController::class,'show']);
