@@ -18,7 +18,6 @@
                 <p>Product type: {{$product->product_type}}</p>
                 <p>Price: {{$product->price}}</p>
             </div>
-
             @endforeach
         </div>
     </body>

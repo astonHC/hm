@@ -8,7 +8,16 @@ use App\Models\Products;
 class ProductController extends Controller
 {
         public function list(){
-    return view('products/products', array('product'=>Products::all()));    
+
+            $product = Products::where('product_name','honey')->get();
+
+            if ($product->isEmpty()) {
+                // Handle the case when there are no products
+                return view('products.products', ['message' => 'No products available']);
+            }
+
+    //return view('products/products', array('product'=>Products::all())); 
+        return view('products.products', compact('product'));   
     }
 
     public function show($id){
