@@ -31,3 +31,6 @@ Route::get('show/{id}', [UserController::class,'show']);
 
 
 Route::get('products',[ProductController::class,'list'])->name('products');
+
+
+Route::get('checkout', [CheckoutController::class, 'placeOrder']);
