@@ -100,8 +100,9 @@
 
             </script>
 
-        </main>
+            @include('layouts.footer') <!-- add footer to contacts page -->
 
+        </main>
 
     </body>
 </html>
