@@ -34,8 +34,7 @@ class TestController extends Controller
     public function basket(){
         return view('basket.basket');
     }
-
-    // public function products(){
-    //     return view('products.products');
-    // }
+    public function checkout(){
+        return view('checkout.checkout');
+    }
 }
