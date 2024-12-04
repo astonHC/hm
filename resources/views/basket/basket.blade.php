@@ -169,10 +169,11 @@
                 <span id="total"></span>
             </div>
 
-            <button class="bg-yellow-400 hover:bg-yellow-500 rounded-lg mb-10 p-4 mr-5 ml-5 mt-10 w-full h-56 lg:h-24 text-7xl lg:text-3xl"
+            <a href={{ route('checkout') }}><button class="bg-yellow-400 hover:bg-yellow-500 rounded-lg mb-10 p-4 mr-5 ml-5 mt-10 w-full h-56 lg:h-24 text-7xl lg:text-3xl"
                 onClick="addCheckedItemsToCheckout()"> GO
                 TO
-                CHECKOUT</button>
+                CHECKOUT</button> 
+                </a>
 
         </div>
     </div>
