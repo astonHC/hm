@@ -5,13 +5,6 @@
     </head>
     <body>
         @include('layouts.navbar')
-        <!-- <div class="flex justify-between [&>*]:h-[50px] [&>*]:bg-amber [&>*]:w-screen [&>*]:mx-[2px] [&>*]:rounded [&>*]:text-center [&>*]:justify-center mt-1 mx-1">
-            <div><p>Skincare</p></div>
-            <div><p>Health</p></div>
-            <div><p>Beauty</p></div>
-            <div><p>Haircare</p></div>
-            <div><p>Merch</p></div>
-        </div> -->
         <div class="categories w-screen">
             <ul class="list-none flex justify-between mt-1 mx-1">
                 <li>
