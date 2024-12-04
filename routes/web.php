@@ -31,3 +31,6 @@ Route::get('show/{id}', [UserController::class,'show']);
 
 
 Route::get('products',[ProductController::class,'list'])->name('products');
+
+// for orders page
+Route::get('/orders', [OrderController::class, 'index'])->name('orders');
