@@ -69,5 +69,10 @@
             </div>
         @endif       
     </section> 
+    </br>
+    </br>
+    </br>
+    </br>
+    @include('layouts.footer')
 </body>
 </html>
