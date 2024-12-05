@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Basket;
-use App\Models\BasketItem;
+use App\Models\Baskets;
+use App\Models\BasketItems;
+
+use App\Models\Users;
 
 class BasketController extends Controller
 {
@@ -14,14 +16,26 @@ class BasketController extends Controller
     public function view()
     {
         // Get the authenticated user
-        $user = Auth::user();
 
+       $user = Users::query()->where('id', 1)->first();
+
+        
+        
         // Retrieve the user's basket
-        $basket = Basket::where('user_id', $user->id)->first();
+        //$basket = Baskets::where('user_id', 1);
+        //$basketItems = Baskets::where('user_id', 1)->first()->items;
+        
+        $basket = $user->basket;
         $basketItems = $basket ? $basket->items : [];
+       
+         foreach ($basketItems as $item) {
+            echo 'Product ID: ' . $item->product_id . '<br>';
+            echo 'Quantity: ' . $item->quantity . '<br>';
+        }
 
         // Return the basket view with basket items
         return view('basket.basket', ['basketItems' => $basketItems]);
+        
     }
 
     /** Add a product to the basket */
@@ -38,7 +52,7 @@ class BasketController extends Controller
         $basket = Basket::firstOrCreate(['user_id' => $user->id]);
 
         // Add or update the product in the basket
-        BasketItem::updateOrCreate(
+        BasketItems::updateOrCreate(
             ['basket_id' => $basket->id, 'product_id' => $productID],
             ['quantity' => $request->input('quantity', 1)]
         );

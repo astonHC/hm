@@ -178,6 +178,14 @@
 
     </div>
 
+
+     @foreach($basketItems as $item)
+            <div>
+                <p>ID {{$item->product_id}}</p>
+            </div>
+
+            @endforeach
+
 </body>
 
 </html>

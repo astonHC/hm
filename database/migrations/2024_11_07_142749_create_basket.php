@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('basket', function (Blueprint $table) {
+        Schema::create('baskets', function (Blueprint $table) {
             $table->id('id');
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();

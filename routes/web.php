@@ -21,7 +21,6 @@ Route::get('contact', [TestController::class, 'contact'])->name('contact');
 
 Route::get('account', [TestController::class, 'account'])->name('account');
 
-Route::get('basket', [TestController::class, 'basket'])->name('basket');
 
 Route::get('about', [TestController::class, 'about'])->name('about');
 
@@ -36,7 +35,7 @@ Route::get('products',[ProductController::class,'list'])->name('products');
 
 
 
-    Route::get('/basket',[BasketController::class, 'view'])->name('basket.view');
+    Route::get('basket',[BasketController::class, 'view'])->name('basket.view');
 
     Route::post('/basket/add/{productID}',[BasketController::class, 'addToBasket'])->name('basket.add');
 
