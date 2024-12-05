@@ -8,19 +8,20 @@
         <p class="text-6xl">Products</p>
 
         <form action="{{ route('products') }}" method="GET">
-            <input type="text" name="product_name" />
+            <input type="text" name="product_name" value="{{ request('product_name') }}"/>
             <br />
             <button type="submit">Submit</button>
         </form>
 
+        <!----prettier-ignore-->
         <form action="{{ route('products') }}" method="GET">
-            <select name="filter" onchange="this.form.submit()">
-                <option>Select</option>
-                <option value="Skincare">Skincare</option>
-                <option value="Health">Health</option>
-                <option value="Beauty">Beauty</option>
-                <option value="Haircare">Haircare</option>
-                <option value="Merch">Merch</option>
+                <select name="filter" onchange="this.form.submit()">
+                <option value="none"{{ request('filter') == 'none' ? 'selected' : '' }}>None</option>
+                <option value="Skincare" {{ request('filter') == 'Skincare' ? 'selected' : '' }}>Skincare</option>
+                <option value="Health" {{ request('filter') == 'Health' ? 'selected' : '' }}>Health</option>
+                <option value="Beauty" {{ request('filter') == 'Beauty' ? 'selected' : '' }}>Beauty</option>
+                <option value="Haircare" {{ request('filter') == 'Haircare' ? 'selected' : '' }}>Haircare</option>
+                <option value="Merch" {{ request('filter') == 'Merch' ? 'selected' : '' }}>Merch</option>
             </select>
         </form>
 
@@ -30,7 +31,7 @@
 
         <div class="grid grid-cols-4">
             @foreach($products as $product)
-            <a
+            <a href="{{route('products.show', $product->id)}}"
                 ><div>
                     <h1>{{$product->product_name}}</h1>
                     <img

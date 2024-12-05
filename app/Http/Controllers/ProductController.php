@@ -18,9 +18,14 @@ class ProductController extends Controller
             }
 
             $filter = $request->input('filter');
+
+            echo $filter == "none";
             
-            if($filter){
-                 $products = Products::where('product_type', '=', $filter)->get();
+            if($filter == "none"){
+                 $products = Products::all();
+            }
+            else{
+                $products = Products::where('product_type', '=', $filter)->get();
             }
 
             
@@ -31,7 +36,7 @@ class ProductController extends Controller
 
    public function show($id)
     {
-        $product = Product::findOrFail($id);
-        return view('show', ['product' => $product]); 
+        $product = Products::findOrFail($id);
+        return view('products.show', ['product' => $product]); 
     }
 }
