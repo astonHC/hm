@@ -34,7 +34,7 @@
                     nec dapibus rhoncus. Vestibulum vel ex eu turpis efficitur
                     fermentum.
                 </p>
-                <button type="button" class="border border-black">
+                <button type="button" class="bg-amber w-full">
                     Add to Basket
                 </button>
             </div>
