@@ -21,7 +21,7 @@ class BasketController extends Controller
         $basketItems = $basket ? $basket->items : [];
 
         // Return the basket view with basket items
-        return view('basket.view', ['basketItems' => $basketItems]);
+        return view('basket.basket', ['basketItems' => $basketItems]);
     }
 
     /** Add a product to the basket */
