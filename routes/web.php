@@ -28,6 +28,8 @@ Route::get('about', [TestController::class, 'about'])->name('about');
 Route::get('list',[UserController::class,'list'])->name('list_user');
 Route::get('show/{id}', [UserController::class,'show']);
 
-
-
 Route::get('products',[ProductController::class,'list'])->name('products');
+
+Route::post('products/{id}add-to-basket',[ProductController::class, 'addToBasket'])->name('products.addToBasket');
+Route::delete('products/{id}remove-from-basket',[ProductController::class, 'removeFromBasket'])->name('products.removefrombasket');
+Route::get('basket',[UserController::class, 'basket'])->name('user.basket');
