@@ -46,5 +46,6 @@
             @endforeach
         </div>
         @endif
+        @include('layouts.footer')  
     </body>
 </html>
