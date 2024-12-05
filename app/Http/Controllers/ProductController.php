@@ -16,13 +16,22 @@ class ProductController extends Controller
             } else {
                 $products = Products::all();
             }
+
+            $filter = $request->input('filter');
+            
+            if($filter){
+                 $products = Products::where('product_type', '=', $filter)->get();
+            }
+
             
         return view('products.products', compact('products', 'search'));   
     }
 
    
 
-    public function show($id){
-        return view('products/show', array('product'=>Products::find($id)));
+   public function show($id)
+    {
+        $product = Product::findOrFail($id);
+        return view('show', ['product' => $product]); 
     }
 }

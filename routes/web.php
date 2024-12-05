@@ -26,9 +26,10 @@ Route::get('about', [TestController::class, 'about'])->name('about');
 
 
 Route::get('list',[UserController::class,'list'])->name('list_user');
-Route::get('show/{id}', [UserController::class,'show']);
+//Route::get('show/{id}', [UserController::class,'show']);
 
 
 
 //Route::get('products',[ProductController::class,'list'])->name('products');
 Route::get('products',[ProductController::class,'list'])->name('products');
+Route::get('show/{id}', [ProductController::class,'show']);
