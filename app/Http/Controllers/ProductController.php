@@ -9,33 +9,22 @@ class ProductController extends Controller
 {
         public function list(Request $request){
             
-            $search = $request->input('product_name');
+           $search = $request->input('product_name');
+        $filter = $request->input('filter');
 
-            if ($search) {
-                $products = Products::where('product_name', 'like', '%' . $search . '%')->get();
-            } else {
-                $products = Products::all();
-            }
+        $products = Products::query();
 
-            $filter = $request->input('filter');
+        if ($search) {
+            $products->where('product_name', 'like', '%' . $search . '%');
+        }
 
+        if ($filter && $filter != 'none') {
+            $products->where('product_type', '=', $filter);
+        }
 
-            if($filter){
-                if($filter == "none"){
-                 $products = Products::all();
-            }
-            else{
-                $products = Products::where('product_type', '=', $filter)->get();
-            }
-            }
-            else{
-                 $products = Products::all();
-            }
-            
-            
+        $products = $products->get();
 
-            
-        return view('products.products', compact('products', 'search'));   
+        return view('products.products', compact('products', 'search', 'filter'));  
     }
 
    
