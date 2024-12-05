@@ -16,16 +16,7 @@ class ProductController extends Controller
             } else {
                 $products = Products::all();
             }
-           
-
             
-
-            if ($products->isEmpty()) {
-                // Handle the case when there are no products
-                return view('products.products', ['message' => 'No products available']);
-            }
-
-    //return view('products/products', array('product'=>Products::all()));  
         return view('products.products', compact('products', 'search'));   
     }
 

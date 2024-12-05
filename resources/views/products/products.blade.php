@@ -8,10 +8,22 @@
         <p class="text-6xl">Products</p>
 
         <form action="{{ route('products') }}" method="GET">
-            <input type="text" name="product_name" required />
+            <input type="text" name="product_name" />
             <br />
             <button type="submit">Submit</button>
         </form>
+
+        <select name="filter">
+            <option value="Skincare">Skincare</option>
+            <option value="Health">Health</option>
+            <option value="Beauty">Beauty</option>
+            <option value="Haircare">Haircare</option>
+            <option value="Merch">Merch</option>
+        </select>
+
+        @if(count($products) === 0)
+        <p>No products found</p>
+        @else
 
         <div class="grid grid-cols-4">
             @foreach($products as $product)
@@ -26,5 +38,6 @@
             </div>
             @endforeach
         </div>
+        @endif
     </body>
 </html>
