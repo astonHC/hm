@@ -13,7 +13,7 @@
             <button type="submit">Submit</button>
         </form>
 
-        <!----prettier-ignore-->
+        
         <form action="{{ route('products') }}" method="GET">
                 <select name="filter" onchange="this.form.submit()">
                 <option value="none"{{ request('filter') == 'none' ? 'selected' : '' }}>None</option>

@@ -19,14 +19,20 @@ class ProductController extends Controller
 
             $filter = $request->input('filter');
 
-            echo $filter == "none";
-            
-            if($filter == "none"){
+
+            if($filter){
+                if($filter == "none"){
                  $products = Products::all();
             }
             else{
                 $products = Products::where('product_type', '=', $filter)->get();
             }
+            }
+            else{
+                 $products = Products::all();
+            }
+            
+            
 
             
         return view('products.products', compact('products', 'search'));   
