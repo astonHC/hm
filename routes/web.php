@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BasketController;
 
 Route::get('/', function () {
     return view('home');
@@ -30,6 +31,12 @@ Route::get('show/{id}', [UserController::class,'show']);
 
 Route::get('products',[ProductController::class,'list'])->name('products');
 
-Route::post('products/{id}add-to-basket',[ProductController::class, 'addToBasket'])->name('products.addToBasket');
-Route::delete('products/{id}remove-from-basket',[ProductController::class, 'removeFromBasket'])->name('products.removefrombasket');
-Route::get('basket',[UserController::class, 'basket'])->name('user.basket');
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/basket',[BasketController::class, 'view'])->name('basket.view');
+
+    Route::post('/basket/add/{productID}',[BasketController::class, 'addToBasket'])->name('basket.add');
+
+    Route::delete('products/remove/{productID}',[BasketController::class, 'removeFromBasket'])->name('basket.remove');
+
+});
