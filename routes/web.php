@@ -31,6 +31,9 @@ Route::get('show/{id}', [UserController::class,'show']);
 
 Route::get('products',[ProductController::class,'list'])->name('products');
 
+/**Middleware is a mehcnism that allows you to perform actions such as authentication, logging, validaition and such 
+ * before or after the request is processed by your controller. Ultimately, it acts as a bridge between request and a response. */
+
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/basket',[BasketController::class, 'view'])->name('basket.view');
