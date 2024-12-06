@@ -10,50 +10,72 @@
         </div>
 
         <div class="flex justify-center">
-            <form action="{{ route('products') }}" method="GET">
-                <input
-                    type="text"
-                    name="product_name"
-                    value="{{ request('product_name') }}"
-                    class="w-[75vw] rounded"
-                />
-                <br />
-            </form>
+            <div class="flex justify-center w-[75vw] border">
+                <form
+                    action="{{ route('products') }}"
+                    method="GET"
+                    class="w-full mr-3"
+                >
+                    <input
+                        type="text"
+                        name="product_name"
+                        value="{{ request('product_name') }}"
+                        class="rounded w-full"
+                    />
+                    <br />
+                </form>
+                <form action="{{ route('products') }}" method="GET">
+                    <select name="filter" onchange="this.form.submit()">
+                        <option value="none"{{ request('filter') == 'none' ? 'selected' : '' }}>None</option>
+                        <option value="Skincare" {{ request('filter') == 'Skincare' ? 'selected' : '' }}>Skincare</option>
+                        <option value="Health" {{ request('filter') == 'Health' ? 'selected' : '' }}>Health</option>
+                        <option value="Beauty" {{ request('filter') == 'Beauty' ? 'selected' : '' }}>Beauty</option>
+                        <option value="Haircare" {{ request('filter') == 'Haircare' ? 'selected' : '' }}>Haircare</option>
+                        <option value="Merch" {{ request('filter') == 'Merch' ? 'selected' : '' }}>Merch</option>
+                    </select>
+                </form>
+            </div>
         </div>
 
-        <!-- <form action="{{ route('products') }}" method="GET">
-                <select name="filter" onchange="this.form.submit()">
-                <option value="none"{{ request('filter') == 'none' ? 'selected' : '' }}>None</option>
-                <option value="Skincare" {{ request('filter') == 'Skincare' ? 'selected' : '' }}>Skincare</option>
-                <option value="Health" {{ request('filter') == 'Health' ? 'selected' : '' }}>Health</option>
-                <option value="Beauty" {{ request('filter') == 'Beauty' ? 'selected' : '' }}>Beauty</option>
-                <option value="Haircare" {{ request('filter') == 'Haircare' ? 'selected' : '' }}>Haircare</option>
-                <option value="Merch" {{ request('filter') == 'Merch' ? 'selected' : '' }}>Merch</option>
-            </select>
-        </form> -->
+        
 
         @if(count($products) === 0)
-        <p>No products found</p>
+        <div class="flex justify-center mt-5"><h1 class="text-3xl">No Products Found</h1></div>
+        
+
         @else
 
-        <div class="flex justify-center">
-            <div class="grid grid-cols-5 gap-0 w-3/4">
-                @foreach($products as $product)
-                <a href="{{route('products.show', $product->id)}}" class="w-fit"
-                    ><div class="size-full p-1">
-                        <h1 class="text-center">
-                            {{strtoupper($product->product_name)}}
-                        </h1>
-                        <img
-                            class="h-[100%]"
-                            src="{{ asset('Images/product images/' . $product->product_name . '.png') }}"
-                        />
-                        <p>Product type: {{$product->product_type}}</p>
-                        <p>Price: {{$product->price}}</p>
-                    </div></a
-                >
+        <div class="inline-block mt-5">
+            @if($search)
+            <div class="flex justify-center">
+                <div class="flex justify-between my-3 w-3/4 border">
+                    <h1 class="text-center text-3xl">
+                        Displaying {{ sizeof($products) }} Product(s)
+                    </h1>
+                </div>
+            </div>
 
-                @endforeach
+            @endif
+            <div class="flex justify-center">
+                <div class="grid grid-cols-5 gap-0 w-3/4">
+                    @foreach($products as $product)
+                    <a
+                        href="{{route('products.show', $product->id)}}"
+                        class="w-fit"
+                        ><div class="size-full p-1">
+                            <img
+                                class="h-[100%]"
+                                src="{{ asset('Images/product images/' . $product->product_name . '.png') }}"
+                            />
+                             <h1 class="text-center text-xl">
+                                {{strtoupper($product->product_name)}}
+                            </h1>
+                            <p>£{{$product->price}}</p>
+                        </div></a
+                    >
+
+                    @endforeach
+                </div>
             </div>
         </div>
 
