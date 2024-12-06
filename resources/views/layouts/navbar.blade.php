@@ -46,26 +46,46 @@
                     </li>
                 </ul>
 
+                <!-- Search Icon and Hidden Bar -->
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <input
+                        id="searchBar"
+                        type="text"
+                        placeholder="Search"
+                        class="hidden md:block w-48 bg-white text-black placeholder-gray-500 rounded-full px-4 py-2 shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
+                    />
+
+                    <!-- Search Icon -->
+                    <button
+                        id="searchIcon"
+                        class="text-white hover:text-gray-200 focus:outline-none"
+                        onclick="toggleSearchBar()"
+                    >
+                        <i class="fas fa-search fa-xl"></i>
+                    </button>
+                </div>
+
                 <a
                     href="{{ route('basket') }}"
                     class="fas fa-shopping-basket fa-xl hover:text-gray-200 transition"
                 ></a>
-
-                @auth
                 <a
                     href="{{ route('account') }}"
                     class="fas fa-user fa-xl hover:text-gray-200 transition"
                 ></a>
-                @else
-                <a
-                    href="{{ route('login') }}"
-                    class="fas fa-user fa-xl hover:text-gray-200 transition"
-                ></a>
-                @endauth
             </div>
         </nav>
 
         <!-- bottom diagonal stripes -->
         <div class="cdwa-right h-[13px] w-screen"></div>
     </div>
+
+    <script>
+        // JavaScript to toggle search bar visibility
+        function toggleSearchBar() {
+            const searchBar = document.getElementById("searchBar");
+            searchBar.classList.toggle("hidden"); // Toggle the "hidden" class
+        }
+    </script>
 </body>
