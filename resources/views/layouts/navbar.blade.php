@@ -81,9 +81,6 @@
 
         <!-- bottom diagonal stripes -->
         <div class="cdwa-right h-[13px] w-screen"></div>
-
-        <!-- bottom diagonal stripes -->
-        <div class="cdwa-right h-[13px] w-screen"></div>
     </div>
 
     <script>
