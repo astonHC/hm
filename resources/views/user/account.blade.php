@@ -6,5 +6,7 @@
     <body>
         @include('layouts.navbar')
         <p class="text-6xl">Your Account</p>
+
+        <a href="{{ route('logout') }}">Logout</a>
     </body>
 </html>
