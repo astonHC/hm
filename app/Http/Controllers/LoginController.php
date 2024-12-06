@@ -21,11 +21,11 @@ class LoginController extends Controller
             'password' => 'required|string',
         ]);
 
-        $user = User::where('email', $request->email)->first();
+        $user = User::where('email_address', $request->email)->first();
 
         if ($user && Hash::check($request->password, $user->password)) {
             Auth::login($user);
-            return redirect()->route('dashboard')->with('success', 'Login successful!');
+            return redirect()->route('home')->with('success', 'Login successful!');
         }
 
         return back()->withErrors(['login' => 'Invalid email or password.'])->withInput();
