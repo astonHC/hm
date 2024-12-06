@@ -32,24 +32,27 @@
         <p>No products found</p>
         @else
 
-        <div class="grid grid-cols-5 gap-0">
-            @foreach($products as $product)
-            <a
-                href="{{route('products.show', $product->id)}}"
-                class="w-fit border"
-                ><div class="size-fit">
-                    <h1>{{$product->product_name}}</h1>
-                    <img
-                        class="size-[175px]"
-                        src="{{ asset('../Images/placeholder.avif') }}"
-                    />
-                    <p>Product type: {{$product->product_type}}</p>
-                    <p>Price: {{$product->price}}</p>
-                </div></a
-            >
+        <div class="flex justify-center">
+            <div class="grid grid-cols-5 gap-0 w-1/2">
+                @foreach($products as $product)
+                <a href="{{route('products.show', $product->id)}}" class="w-fit"
+                    ><div class="size-fit m-[3px]">
+                        <h1 class="text-center">
+                            {{strtoupper($product->product_name)}}
+                        </h1>
+                        <img
+                            class="w-[351px] h-[430px]"
+                            src="{{ asset('../Images/placeholder.avif') }}"
+                        />
+                        <p>Product type: {{$product->product_type}}</p>
+                        <p>Price: {{$product->price}}</p>
+                    </div></a
+                >
 
-            @endforeach
+                @endforeach
+            </div>
         </div>
+
         @endif @include('layouts.footer')
     </body>
 </html>
