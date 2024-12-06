@@ -18,6 +18,8 @@ Route::get('home', [TestController::class, 'home'])->name('home');
 //Route::get('products', [TestController::class, 'products'])->name('products');
 Route::get('contact', [TestController::class, 'contact'])->name('contact');
 
+Route::get('signup', [TestController::class, 'signup'])->name('signup');
+
 Route::get('account', [TestController::class, 'account'])->name('account');
 
 Route::get('basket', [TestController::class, 'basket'])->name('basket');

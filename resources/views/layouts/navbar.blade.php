@@ -21,6 +21,7 @@
                     <li><a href="{{ route('products') }}" class="hover:text-gray-200 transition">Shop Us</a></li>
                     <li><a href="{{ route('about') }}" class="hover:text-gray-200 transition">About Us</a></li>
                     <li><a href="{{ route('contact') }}" class="hover:text-gray-200 transition">Contact Us</a></li>
+                    <li><a href="{{ route('signup') }}" class="hover:text-gray-200 transition">Sign up</a></li>
                 </ul>
 
                 <a href="{{ route('basket') }}" class="fas fa-shopping-basket fa-xl hover:text-gray-200 transition"></a>
