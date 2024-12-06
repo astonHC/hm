@@ -5,17 +5,21 @@
     </head>
     <body>
         @include('layouts.navbar')
-        <p class="text-6xl">Products</p>
+        <div class="justify-center py-5">
+            <p class="text-6xl text-center">Shop us</p>
+        </div>
 
-        <form action="{{ route('products') }}" method="GET">
-            <input
-                type="text"
-                name="product_name"
-                value="{{ request('product_name') }}"
-            />
-            <br />
-            <button type="submit">Submit</button>
-        </form>
+        <div class="flex justify-center">
+            <form action="{{ route('products') }}" method="GET">
+                <input
+                    type="text"
+                    name="product_name"
+                    value="{{ request('product_name') }}"
+                    class="w-[75vw] rounded"
+                />
+                <br />
+            </form>
+        </div>
 
         <!-- <form action="{{ route('products') }}" method="GET">
                 <select name="filter" onchange="this.form.submit()">
@@ -33,16 +37,16 @@
         @else
 
         <div class="flex justify-center">
-            <div class="grid grid-cols-5 gap-0 w-1/2">
+            <div class="grid grid-cols-5 gap-0 w-3/4">
                 @foreach($products as $product)
                 <a href="{{route('products.show', $product->id)}}" class="w-fit"
-                    ><div class="size-fit m-[3px]">
+                    ><div class="size-full p-1">
                         <h1 class="text-center">
                             {{strtoupper($product->product_name)}}
                         </h1>
                         <img
-                            class="w-[351px] h-[430px]"
-                            src="{{ asset('../Images/placeholder.avif') }}"
+                            class="h-[100%]"
+                            src="{{ asset('Images/product images/' . $product->product_name . '.png') }}"
                         />
                         <p>Product type: {{$product->product_type}}</p>
                         <p>Price: {{$product->price}}</p>
