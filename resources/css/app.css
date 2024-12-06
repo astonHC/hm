@@ -26,7 +26,7 @@
 
 body {
     color: rgb(var(--foreground-rgb));
-    @apply bg-ghost-white text-raisin-black;
+    @apply bg-ghost-white text-raisin-black h-screen;
 }
 
 @layer utilities {
@@ -36,7 +36,6 @@ body {
 }
 
 @layer components {
-    
     /* my added code!! */
     .navbar {
         @apply flex justify-between items-center bg-amber text-white px-6 py-4;
@@ -58,12 +57,13 @@ body {
         @apply hover:text-gray-200 transition; /* hover effect */
     }
 
-    .navbar .fas, .navbar .far {
+    .navbar .fas,
+    .navbar .far {
         @apply fa-xl hover:text-gray-200 transition; /* icons hover effect and size */
     }
-    
+
     /* the end of my added code */
-    
+
     /*
     .navbar ul li {
         transition-duration: 200ms;
