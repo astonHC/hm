@@ -6,48 +6,62 @@
     <body>
         @include('layouts.navbar')
 
-        <div class="flex justify-center my-12"><p class="m-[10px] text-6xl">Welcome To HiveMind</p></div>
-        
-    </div>
-    <div class="categories w-screen">
-        <ul class="list-none flex justify-between mt-1 mx-4">
-            <li>
-                <p>SkinCare</p>
-            </li>
-            <li>
-                <p>Health</p>
-            </li>
-            <li>
-                <p>Beauty</p>
-            </li>
-            <li>
-                <p>Haircare</p>
-            </li>
-            <li>
-                <p>Merch</p>
-            </li>
-        </ul>
-    </div>
-    <div class="wrapper">
-        <div class="track">
-            <div class="logo">
-                <img src="{{ asset('../Images/placeholder.avif') }}"/>
+        <main>
+            <!-- add a backdrop -->
+            <section class="bg-white py-20 bg-cover bg-center" style="background-image: url('{{ asset('../Images/bee backdrop for homepage flipped.jpg') }}');">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">Welcome to HiveMind</h1>
+                <p class="text-gray-700 text-lg mb-8">Bee a part of a kinder world with one click</p>
+                <button class="bg-yellow-700 text-white px-6 py-3 rounded-md hover:bg-yellow-800"><a href="{{ route('products') }}">Shop Now</a></button>
+                <button class="bg-yellow-700 text-white px-6 py-3 rounded-md hover:bg-yellow-800"><a href="{{ route('about') }}">Learn More About Us</a></button>
             </div>
-            <div class="logo">
-                <img src="{{ asset('../Images/placeholder.avif') }}"/>
+            </section>
+
+
+            <section class="py-12">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Shop Our Products by Category</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                <div class="bg-white rounded-lg shadow-md">
+                    <img src="{{ asset('../Images/placeholder.avif') }}" alt="Health" class="w-full h-64 object-cover rounded-t-lg">
+                    <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-900">Health</h3>
+                    <!-- <p class="text-gray-700">$49.99</p> -->
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md">
+                    <img src="{{ asset('../Images/placeholder.avif') }}" alt="Skincare" class="w-full h-64 object-cover rounded-t-lg">
+                    <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-900">Skincare</h3>
+                    <!-- <p class="text-gray-700">$49.99</p> -->
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md">
+                    <img src="{{ asset('../Images/placeholder.avif') }}" alt="Beauty" class="w-full h-64 object-cover rounded-t-lg">
+                    <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-900">Beauty</h3>
+                    <!-- <p class="text-gray-700">$49.99</p> -->
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md">
+                    <img src="{{ asset('../Images/placeholder.avif') }}" alt="Haircare" class="w-full h-64 object-cover rounded-t-lg">
+                    <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-900">Haircare</h3>
+                    <!-- <p class="text-gray-700">$49.99</p> -->
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md">
+                    <img src="{{ asset('../Images/placeholder.avif') }}" alt="Merchandise" class="w-full h-64 object-cover rounded-t-lg">
+                    <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-900">Merchandise</h3>
+                    <!-- <p class="text-gray-700">$49.99</p> -->
+                    </div>
+                </div>
+                </div>
             </div>
-            <div class="logo">
-                <img src="{{ asset('../Images/placeholder.avif') }}"/>
-            </div>
-            <div class="logo">
-                <img src="{{ asset('../Images/placeholder.avif') }}"/>
-            </div>
-            <div class="logo">
-                <img src="{{ asset('../Images/placeholder.avif') }}"/>
-            </div>
-            
-            </div>
-        </div>
-    </div>
+            </section>
+        </main>
+
+        @include('layouts.footer')
     </body>
 </html>
