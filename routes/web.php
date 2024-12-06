@@ -6,6 +6,8 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\LoginController;
+
 
 Route::get('/', function () {
     return view('home');
@@ -25,13 +27,22 @@ Route::get('basket', [TestController::class, 'basket'])->name('basket');
 
 Route::get('about', [TestController::class, 'about'])->name('about');
 
+// routes for login page
+// Route::view('/login', 'login.login')->name('login');
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 
 Route::get('list',[UserController::class,'list'])->name('list_user');
-Route::get('show/{id}', [UserController::class,'show']);
+//Route::get('show/{id}', [UserController::class,'show']);
 
 
 
+//Route::get('products',[ProductController::class,'list'])->name('products');
 Route::get('products',[ProductController::class,'list'])->name('products');
+
 
 // for orders page
 Route::get('/orders', [OrderController::class, 'index'])->name('orders');
+
+Route::get('products/{id}', [ProductController::class, 'show'])->name('products.show'); 
+
