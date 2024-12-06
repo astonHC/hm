@@ -24,7 +24,7 @@
                 </ul>
 
                 <a href="{{ route('basket') }}" class="fas fa-shopping-basket fa-xl hover:text-gray-200 transition"></a>
-                <a href="{{ route('login') }}" class="fas fa-user fa-xl hover:text-gray-200 transition"></a>
+                <a href="{{ route('account') }}" class="fas fa-user fa-xl hover:text-gray-200 transition"></a>
             </div>
         </nav>
 
