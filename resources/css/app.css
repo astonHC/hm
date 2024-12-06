@@ -41,11 +41,41 @@ body {
 }
 
 @layer components {
+
+    /* my added code!! */
+    .navbar {
+        @apply flex justify-between items-center bg-amber text-white px-6 py-4;
+    }
+
+    .navbar img {
+        @apply h-12 w-auto mr-3; /* height of logo */
+    }
+
+    .navbar h1 {
+        @apply text-2xl font-bold; /* logo text styling */
+    }
+
+    .navbar ul {
+        @apply hidden md:flex space-x-8 text-lg; /* show links in a row on medium screens and larger */
+    }
+
+    .navbar ul li a {
+        @apply hover:text-gray-200 transition; /* hover effect */
+    }
+
+    .navbar .fas, .navbar .far {
+        @apply fa-xl hover:text-gray-200 transition; /* icons hover effect and size */
+    }
+    
+    /* the end of my added code */
+    
+    /*
     .navbar ul li {
         transition-duration: 200ms;
         @apply text-sm rounded mr-[25px] sm:mr-[20px] cursor-pointer hidden hover:bg-ghost-white hover:text-night
     md:p-5 md:flex md:text-2xl  p-1;
     }
+    */
 
     .categories ul li {
         transition-duration: 200ms;
@@ -207,8 +237,8 @@ body {
             transparent 90%,
             white 75%
         );
-        background-size: 40px 40px;
-        @apply bg-amber w-full h-[25px];
+        background-size: 25px 25px; /* changed the thickness of stripes */
+        @apply bg-amber w-full h-[13px]; /* changed the height of stripes */
     }
 
     .cdb-right {
