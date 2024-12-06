@@ -7,7 +7,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-gray-100 min-h-screen flex flex-col items-center">
+<body>
     @include('layouts.navbar')
 
     <main class="mt-12 flex flex-col items-center">

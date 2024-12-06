@@ -29,6 +29,10 @@ body {
     @apply bg-ghost-white text-raisin-black h-screen;
 }
 
+main {
+    @apply h-full;
+}
+
 @layer utilities {
     .text-balance {
         text-wrap: balance;
