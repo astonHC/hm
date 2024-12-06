@@ -2,11 +2,18 @@
 <body>
     <div class="overflow-hidden">
         <!-- navbar -->
-        <nav class="navbar flex justify-between items-center bg-amber text-white px-6 py-4">
+        <nav
+            class="navbar flex justify-between items-center bg-amber text-white px-6 py-4"
+        >
             <!-- logo section -->
-            <a href="{{ route('home') }}" class="flex items-center hover:text-gray-200 transition duration-200">
+            <a
+                href="{{ route('home') }}"
+                class="flex items-center hover:text-gray-200 transition duration-200"
+            >
                 <img
                     src="{{ asset('../Images/HiveMind Logo.png') }}"
+                    alt="HiveMind Logo"
+                    class="h-12 w-auto mr-3"
                     alt="HiveMind Logo"
                     class="h-12 w-auto mr-3"
                 />
@@ -18,9 +25,27 @@
                 <!-- navigation links -->
                 <!-- links are next to icons -->
                 <ul class="hidden md:flex space-x-8 text-lg">
-                    <li><a href="{{ route('products') }}" class="hover:text-gray-200 transition">Shop Us</a></li>
-                    <li><a href="{{ route('about') }}" class="hover:text-gray-200 transition">About Us</a></li>
-                    <li><a href="{{ route('contact') }}" class="hover:text-gray-200 transition">Contact Us</a></li>
+                    <li>
+                        <a
+                            href="{{ route('products') }}"
+                            class="hover:text-gray-200 transition"
+                            >Shop Us</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="{{ route('about') }}"
+                            class="hover:text-gray-200 transition"
+                            >About Us</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="{{ route('contact') }}"
+                            class="hover:text-gray-200 transition"
+                            >Contact Us</a
+                        >
+                    </li>
                 </ul>
 
                 <!-- Search Icon and Hidden Bar -->
@@ -43,10 +68,19 @@
                     </button>
                 </div>
 
-                <a href="{{ route('basket') }}" class="fas fa-shopping-basket fa-xl hover:text-gray-200 transition"></a>
-                <a href="{{ route('account') }}" class="fas fa-user fa-xl hover:text-gray-200 transition"></a>
+                <a
+                    href="{{ route('basket') }}"
+                    class="fas fa-shopping-basket fa-xl hover:text-gray-200 transition"
+                ></a>
+                <a
+                    href="{{ route('account') }}"
+                    class="fas fa-user fa-xl hover:text-gray-200 transition"
+                ></a>
             </div>
         </nav>
+
+        <!-- bottom diagonal stripes -->
+        <div class="cdwa-right h-[13px] w-screen"></div>
 
         <!-- bottom diagonal stripes -->
         <div class="cdwa-right h-[13px] w-screen"></div>
@@ -59,6 +93,4 @@
             searchBar.classList.toggle("hidden"); // Toggle the "hidden" class
         }
     </script>
-
-
 </body>
