@@ -1,9 +1,6 @@
 <footer
     style="background-image: url(/Images/honeycomb2.png)"
-
-    class="bottom-0 w-full h-fit-content border border-amber"
-
-
+    class="abnsolute bottom-0 w-full h-fit-content border border-amber"
 >
     <div class="container mx-auto flex justify-between h-fit">
         <!-- adding first third of footer (left side), includes contact information / link to contact page -->
@@ -14,17 +11,23 @@
             <p class="text-sm text-gray-800">Dublin, Ireland</p>
             <p class="text-sm text-gray-800">Phone: +353-123-4567</p>
             <p class="text-sm text-gray-800">Email: admin@hivemind.com</p>
-            <p class="text-sm text-gray-800">Have an enquiry? Fill in a 
-            <a
-                href="{{ route('contact') }}"
-                class="text-sm text-blue-500 hover:text-blue-600"
-                >contact form</a
-            ></p>
+            <p class="text-sm text-gray-800">
+                Have an enquiry? Fill in a
+                <a
+                    href="{{ route('contact') }}"
+                    class="text-sm text-blue-500 hover:text-blue-600"
+                    >contact form</a
+                >
+            </p>
         </div>
         <!-- adding second third of footer (middle), includes donation button -->
         <div class="w-full md:w-1/3 mt-4 md:mt-0 flex flex-col items-start">
-            <h3 class="text-lg font-semibold text-gray-800">Support Our Cause</h3>
-            <p class="text-sm text-gray-800">Help us save the bees by donating today!</p>
+            <h3 class="text-lg font-semibold text-gray-800">
+                Support Our Cause
+            </h3>
+            <p class="text-sm text-gray-800">
+                Help us save the bees by donating today!
+            </p>
             <a
                 href="https://www.paypal.com/donate/?hosted_button_id=VZZ8YQ994DXUE"
                 class="bg-white text-gray-800 hover:bg-white hover:text-amber font-bold py-2 px-4 rounded mt-4 inline-block"
