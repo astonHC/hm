@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CheckoutController;
 
 Route::get('/', function () {
     return view('home');
@@ -34,5 +35,6 @@ Route::get('show/{id}', [UserController::class,'show']);
 
 Route::get('products',[ProductController::class,'list'])->name('products');
 
+Route::post('checkout', [CheckoutController::class, 'saveAddress'])->name('checkout.saveaddress');
+Route::post('checkout', [CheckoutController::class, 'placeOrder'])->name('checkout.placeorder');
 
-Route::get('checkout', [CheckoutController::class, 'placeOrder']);
