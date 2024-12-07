@@ -179,12 +179,22 @@
     </div>
 
 
-     @foreach($basketItems as $item)
+<!--      @foreach($basketItems as $item)
             <div>
                 <p>ID {{$item->product_id}}</p>
             </div>
 
-            @endforeach
+            @endforeach -->
+
+        @foreach($basketItems as $item)
+            <div>
+                <p><strong>Product Name:</strong> {{ $item->product_name }}</p>
+                <p><strong>Description:</strong> {{ $item->description }}</p>
+                <p><strong>Price:</strong> £{{ $item->price }}</p>
+                <p><strong>Quantity:</strong> {{ $item->quantity }}</p>
+                <p><strong>Total:</strong> £{{ number_format($item->price * $item->quantity, 2) }}</p>
+            </div>
+        @endforeach
 
 </body>
 
