@@ -4,9 +4,9 @@
         <title>About Us</title>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body>
-        @include('layouts.navbar')
-        <br>
+    <body> 
+        <header>@include('layouts.navbar')</header>
+        <main class="mb-auto"><br>
         <div class="aboutUsPage">
             <h2 class="text-5xl font-semibold tracking-tight text-black sm:text-7xl text-center margin-top: 1rem">About HiveMind</h2>
             <br>
@@ -77,7 +77,9 @@
                     <br>
                 </div>
             </div>
-        </div>
-        @include('layouts.footer')
+        </div> </main>
+        
+           @include('layouts.footer') 
     </body>
+   
 </html>

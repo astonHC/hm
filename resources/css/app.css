@@ -31,7 +31,11 @@
 
 body {
     color: rgb(var(--foreground-rgb));
-    @apply bg-ghost-white text-raisin-black;
+    @apply bg-ghost-white text-raisin-black h-screen;
+}
+
+main {
+    @apply h-full;
 }
 
 @layer utilities {
