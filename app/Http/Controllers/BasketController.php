@@ -30,16 +30,23 @@ class BasketController extends Controller
         //$basket = Baskets::where('user_id', 1);
         //$basketItems = Baskets::where('user_id', 1)->first()->items;
         
-        $basket = $user->basket;
+        $basket = Baskets::where('user_id', $user->id)->first();
+
+
+        
         //$basketItems = $basket ? $basket->items : [];
-        $basketItems = BasketItems::where('basket_id', $basket->id)
-           ->join('products','basket_items.product_id','=','products.id')
-           ->select(
-            'basket_items.*', //.* means it selects all basket item fields
-            'products.product_name',
-            'products.description',
-            'products.price'
-           )->get();
+
+         $basketItems = BasketItems::where('basket_id', $basket->id)
+            ->join('products','basket_items.product_id','=','products.id')
+            ->select(
+             'basket_items.*', //.* means it selects all basket item fields
+             'products.product_name',
+             'products.description',
+             'products.price'
+            )->get();
+
+
+
         //What I've done above is manually fetched the products.
         //This could've been avoided if only belongsTo was working but I kept getting errors.
         //dd($basketItems); //it stops the execution and prints basketitems
@@ -51,6 +58,8 @@ class BasketController extends Controller
 
         // Return the basket view with basket items
         return view('basket.basket', ['basketItems' => $basketItems]);
+
+        //return view('basket.basket', ['basket' => $basket]);
         
     }
 
