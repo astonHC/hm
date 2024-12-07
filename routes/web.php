@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SignupController;
 
 
 Route::get('/', function () {
@@ -21,7 +22,7 @@ Route::get('home', [TestController::class, 'home'])->name('home');
 //Route::get('products', [TestController::class, 'products'])->name('products');
 Route::get('contact', [TestController::class, 'contact'])->name('contact');
 
-Route::get('signup', [TestController::class, 'signup'])->name('signup');
+
 
 Route::get('account', [TestController::class, 'account'])->name('account');
 
@@ -47,4 +48,8 @@ Route::get('products',[ProductController::class,'list'])->name('products');
 Route::get('/orders', [OrderController::class, 'index'])->name('orders');
 
 Route::get('products/{id}', [ProductController::class, 'show'])->name('products.show'); 
+
+
+// for signup page
+Route::get('signup', [SignupController::class, 'signup'])->name('signup');
 

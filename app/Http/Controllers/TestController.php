@@ -19,11 +19,6 @@ class TestController extends Controller
         return view('contact.contact');
     }
 
-    public function signup(){
-        return view('signup.signup');
-    }
-
-
     public function products(){
         return view('products.products');
     }
