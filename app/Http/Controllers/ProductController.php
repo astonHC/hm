@@ -9,10 +9,16 @@ class ProductController extends Controller
 {
         public function list(Request $request){
             
-           $search = $request->input('product_name');
+           $search = $request->input('search');
         $filter = $request->input('filter');
 
+        $categoryButton = $request->input('categoryButton');
+
         $products = Products::query();
+
+        if($categoryButton){
+            $products->where('product_type', '=', $categoryButton);
+        }
 
         if ($search) {
             $products->where('product_name', 'like', '%' . $search . '%');

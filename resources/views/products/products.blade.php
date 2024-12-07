@@ -19,7 +19,7 @@
                 >
                     <input
                         type="text"
-                        name="product_name"
+                        name="search"
                         value="{{ request('product_name') }}"
                         class="rounded w-full"
                     />
@@ -35,6 +35,7 @@
                         <option value="Merch" {{ request('filter') == 'Merch' ? 'selected' : '' }}>Merch</option>
                     </select>
                 </form>
+                <form action="{{route('products')}}" method="get"><button name="healthButton" value="Health">Health</button></form>
             </div>
         </div>
 
