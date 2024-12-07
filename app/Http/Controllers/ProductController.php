@@ -12,7 +12,13 @@ class ProductController extends Controller
            $search = $request->input('product_name');
         $filter = $request->input('filter');
 
+        $hb = $request->input('healthButton');
+
         $products = Products::query();
+
+        if($hb){
+            $products->where('product_type', '=', 'Health');
+        }
 
         if ($search) {
             $products->where('product_name', 'like', '%' . $search . '%');
