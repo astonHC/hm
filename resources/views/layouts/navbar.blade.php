@@ -25,13 +25,6 @@
                 <ul class="hidden md:flex space-x-8 text-lg">
                     <li>
                         <a
-                            href="{{ route('signup') }}"
-                            class="hover:text-gray-200 transition"
-                            >Sign up</a
-                        >
-                    </li>
-                    <li>
-                        <a
                             href="{{ route('products') }}"
                             class="hover:text-gray-200 transition"
                             >Shop Us</a

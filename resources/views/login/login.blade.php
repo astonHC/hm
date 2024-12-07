@@ -66,7 +66,7 @@
 
             <div class="mt-4 text-center">
                 <a 
-                    href="{{ route('home') }}" 
+                    href="{{ route('signup') }}" 
                     class="text-blue-500 hover:underline text-sm">
                     Not a customer yet? Create an account
                 </a>
