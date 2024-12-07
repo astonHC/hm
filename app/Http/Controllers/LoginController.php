@@ -25,10 +25,16 @@ class LoginController extends Controller
 
         if ($user && Hash::check($request->password, $user->password)) {
             Auth::login($user);
-            return redirect()->route('home')->with('success', 'Login successful!');
+            return redirect()->route('account')->with('success', 'Login successful!');
         }
 
         return back()->withErrors(['login' => 'Invalid email or password.'])->withInput();
     }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('home')->with('success', 'Logged out successfully!');
+    } 
     
 } 

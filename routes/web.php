@@ -42,6 +42,11 @@ Route::get('list',[UserController::class,'list'])->name('list_user');
 
 //Route::get('products',[ProductController::class,'list'])->name('products');
 Route::get('products',[ProductController::class,'list'])->name('products');
+Route::get('products/{id}', [ProductController::class, 'show'])->name('products.show'); 
+
+Route::get('account',[UserController::class,'account'])->name('account');
+
+Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
 
 // for orders page
