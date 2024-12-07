@@ -4,8 +4,9 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
-        @include('layouts.navbar')
-        <div class="justify-center py-5">
+        <header>@include('layouts.navbar')</header>
+        <main class="mb-auto h-screen
+        "><div class="justify-center py-5">
             <p class="text-6xl text-center">Shop us</p>
         </div>
 
@@ -78,7 +79,10 @@
                 </div>
             </div>
         </div>
-
-        @endif @include('layouts.footer')
+        @endif 
+        </main>
+        
     </body>
+   
+    @include('layouts.footer')
 </html>

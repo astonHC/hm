@@ -1,6 +1,6 @@
 <footer
     style="background-image: url(/Images/honeycomb2.png)"
-    class="absolute bottom-0 w-screen h-fit-content border border-black"
+    class="absolute w-screen h-fit-content border border-black"
 >
     <div class="container mx-auto flex justify-between h-fit">
         <!-- adding first third of footer (left side), includes contact information / link to contact page -->
