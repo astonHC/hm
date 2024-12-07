@@ -19,7 +19,7 @@
                 >
                     <input
                         type="text"
-                        name="product_name"
+                        name="search"
                         value="{{ request('product_name') }}"
                         class="rounded w-full"
                     />

@@ -65,7 +65,11 @@
                         <div
                             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3"
                         >
-                            <button value="Health" name="categoryButton">
+                            <button
+                                value="Health"
+                                name="categoryButton"
+                                class="category"
+                            >
                                 <div class="bg-white rounded-lg shadow-md">
                                     <img
                                         src="{{
@@ -84,7 +88,11 @@
                                 </div>
                             </button>
 
-                            <button value="Skincare" name="categoryButton">
+                            <button
+                                value="Skincare"
+                                name="categoryButton"
+                                class="category"
+                            >
                                 <div class="bg-white rounded-lg shadow-md">
                                     <img
                                         src="{{
@@ -103,7 +111,11 @@
                                 </div>
                             </button>
 
-                            <button value="Beauty" name="categoryButton">
+                            <button
+                                value="Beauty"
+                                name="categoryButton"
+                                class="category"
+                            >
                                 <div class="bg-white rounded-lg shadow-md">
                                     <img
                                         src="{{
@@ -122,7 +134,11 @@
                                 </div>
                             </button>
 
-                            <button value="Haircare" name="categoryButton">
+                            <button
+                                value="Haircare"
+                                name="categoryButton"
+                                class="category"
+                            >
                                 <div class="bg-white rounded-lg shadow-md">
                                     <img
                                         src="{{
@@ -141,7 +157,11 @@
                                 </div>
                             </button>
 
-                            <button value="Merch" name="categoryButton">
+                            <button
+                                value="Merch"
+                                name="categoryButton"
+                                class="category"
+                            >
                                 <div class="bg-white rounded-lg shadow-md">
                                     <img
                                         src="{{
