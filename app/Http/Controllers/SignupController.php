@@ -3,29 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\UserRegistration;
-use App\Models\User;
-use Validator;
+use App\Models\Users;
 
 class SignupController extends Controller{
 
 
-    public function signup(Request $request) {$validator = Validator::make($request->all(), [
+    public function signup(){
+        return view('signup');
+    }
+
+
+    public function store(Request $request){
+        $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'phone_numer' => 'required|integer|max:12',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed', ]);
-            if ($validator->fails()) { 
-                return redirect()->back()->withErrors($validator)->withInput();
-            }
-            $user = User::register($request->only(['first_name','last_name','email','password']));
-            if ($user) {
-                return redirect()->back()->with('success','');
-            }
-        }
-        
-    
+            'phone_number' => 'required|string|max:12',
+            'email_address' => 'required|string|email|max:255',
+            'password' => 'required|string|min:8',
+        ]);
+
+        Users::create([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'phone_number' => $request->phone_number,
+            'email_address' => $request->email_address,   
+            'password' => bcrypt($request->password),
+        ]);
+
+        return redirect()->route('login')->with('success', 'Signup successful!');
+    }
 }
 
 

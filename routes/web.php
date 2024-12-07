@@ -52,4 +52,5 @@ Route::get('products/{id}', [ProductController::class, 'show'])->name('products.
 
 // for signup page
 Route::get('signup', [SignupController::class, 'signup'])->name('signup');
+Route::post('signup', [SignupController::class, 'store'])->name('signup.store');   
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use App\Models\User;
+use App\Models\Users;
 
 class LoginController extends Controller
 {
@@ -21,7 +21,7 @@ class LoginController extends Controller
             'password' => 'required|string',
         ]);
 
-        $user = User::where('email_address', $request->email)->first();
+        $user = Users::where('email_address', $request->email)->first();
 
         if ($user && Hash::check($request->password, $user->password)) {
             Auth::login($user);
