@@ -12,12 +12,12 @@ class ProductController extends Controller
            $search = $request->input('product_name');
         $filter = $request->input('filter');
 
-        $hb = $request->input('healthButton');
+        $categoryButton = $request->input('categoryButton');
 
         $products = Products::query();
 
-        if($hb){
-            $products->where('product_type', '=', 'Health');
+        if($categoryButton){
+            $products->where('product_type', '=', $categoryButton);
         }
 
         if ($search) {

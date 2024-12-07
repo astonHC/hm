@@ -61,113 +61,106 @@
                     </h2>
                     <!-- 5 columns to display 5 categories -->
                     <!-- when user clicks on category, it leads to a filtered products page for respective category // yet to be implemented -->
-                    <div
-                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3"
-                    >
-                        <form action="{{ route('products') }}" method="get">
-                            <button value="Health" name="healthButton">
-                                <a
-                                    href="{{ route('products') }}"
-                                    class="category"
-                                >
-                                    <div class="bg-white rounded-lg shadow-md">
-                                        <img
-                                            src="{{
-                                                asset(
-                                                    '../Images/placeholder.avif'
-                                                )
-                                            }}"
-                                            alt="Health"
-                                            class="w-full h-64 object-cover rounded-t-lg"
-                                        />
-                                        <div class="p-4">
-                                            <h3
-                                                class="text-lg font-medium text-gray-900"
-                                            >
-                                                Health
-                                            </h3>
-                                        </div>
+                    <form action="{{ route('products') }}" method="get">
+                        <div
+                            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3"
+                        >
+                            <button value="Health" name="categoryButton">
+                                <div class="bg-white rounded-lg shadow-md">
+                                    <img
+                                        src="{{
+                                            asset('../Images/placeholder.avif')
+                                        }}"
+                                        alt="Health"
+                                        class="w-full h-64 object-cover rounded-t-lg"
+                                    />
+                                    <div class="p-4">
+                                        <h3
+                                            class="text-lg font-medium text-gray-900"
+                                        >
+                                            Health
+                                        </h3>
                                     </div>
-                                </a>
+                                </div>
                             </button>
-                        </form>
 
-                        <a href="#" class="category">
-                            <div class="bg-white rounded-lg shadow-md">
-                                <img
-                                    src="{{
-                                        asset('../Images/placeholder.avif')
-                                    }}"
-                                    alt="Skincare"
-                                    class="w-full h-64 object-cover rounded-t-lg"
-                                />
-                                <div class="p-4">
-                                    <h3
-                                        class="text-lg font-medium text-gray-900"
-                                    >
-                                        Skincare
-                                    </h3>
+                            <button value="Skincare" name="categoryButton">
+                                <div class="bg-white rounded-lg shadow-md">
+                                    <img
+                                        src="{{
+                                            asset('../Images/placeholder.avif')
+                                        }}"
+                                        alt="Skincare"
+                                        class="w-full h-64 object-cover rounded-t-lg"
+                                    />
+                                    <div class="p-4">
+                                        <h3
+                                            class="text-lg font-medium text-gray-900"
+                                        >
+                                            Skincare
+                                        </h3>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </button>
 
-                        <a href="#" class="category">
-                            <div class="bg-white rounded-lg shadow-md">
-                                <img
-                                    src="{{
-                                        asset('../Images/placeholder.avif')
-                                    }}"
-                                    alt="Beauty"
-                                    class="w-full h-64 object-cover rounded-t-lg"
-                                />
-                                <div class="p-4">
-                                    <h3
-                                        class="text-lg font-medium text-gray-900"
-                                    >
-                                        Beauty
-                                    </h3>
+                            <button value="Beauty" name="categoryButton">
+                                <div class="bg-white rounded-lg shadow-md">
+                                    <img
+                                        src="{{
+                                            asset('../Images/placeholder.avif')
+                                        }}"
+                                        alt="Beauty"
+                                        class="w-full h-64 object-cover rounded-t-lg"
+                                    />
+                                    <div class="p-4">
+                                        <h3
+                                            class="text-lg font-medium text-gray-900"
+                                        >
+                                            Beauty
+                                        </h3>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </button>
 
-                        <a href="#" class="category">
-                            <div class="bg-white rounded-lg shadow-md">
-                                <img
-                                    src="{{
-                                        asset('../Images/placeholder.avif')
-                                    }}"
-                                    alt="Haircare"
-                                    class="w-full h-64 object-cover rounded-t-lg"
-                                />
-                                <div class="p-4">
-                                    <h3
-                                        class="text-lg font-medium text-gray-900"
-                                    >
-                                        Haircare
-                                    </h3>
+                            <button value="Haircare" name="categoryButton">
+                                <div class="bg-white rounded-lg shadow-md">
+                                    <img
+                                        src="{{
+                                            asset('../Images/placeholder.avif')
+                                        }}"
+                                        alt="Haircare"
+                                        class="w-full h-64 object-cover rounded-t-lg"
+                                    />
+                                    <div class="p-4">
+                                        <h3
+                                            class="text-lg font-medium text-gray-900"
+                                        >
+                                            Haircare
+                                        </h3>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </button>
 
-                        <a href="#" class="category">
-                            <div class="bg-white rounded-lg shadow-md">
-                                <img
-                                    src="{{
-                                        asset('../Images/placeholder.avif')
-                                    }}"
-                                    alt="Merchandise"
-                                    class="w-full h-64 object-cover rounded-t-lg"
-                                />
-                                <div class="p-4">
-                                    <h3
-                                        class="text-lg font-medium text-gray-900"
-                                    >
-                                        Merchandise
-                                    </h3>
+                            <button value="Merch" name="categoryButton">
+                                <div class="bg-white rounded-lg shadow-md">
+                                    <img
+                                        src="{{
+                                            asset('../Images/placeholder.avif')
+                                        }}"
+                                        alt="Merchandise"
+                                        class="w-full h-64 object-cover rounded-t-lg"
+                                    />
+                                    <div class="p-4">
+                                        <h3
+                                            class="text-lg font-medium text-gray-900"
+                                        >
+                                            Merchandise
+                                        </h3>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </section>
         </main>
