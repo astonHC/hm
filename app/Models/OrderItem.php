@@ -10,11 +10,11 @@ class OrderItem extends Model
     //use HasFactory;
 
     // Define the table if it's not the default 'registers'
-    protected $table = 'order_item';
+    protected $table = 'order_items';
 
     // Define the fillable fields
     protected $fillable = [
-        //'order_item_id',
+        'order_item_id',
         'order_id',
         'product_id',
         'quantity',

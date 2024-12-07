@@ -14,7 +14,7 @@ class Order extends Model
 
     // Define the fillable fields
     protected $fillable = [
-        //'order_id',
+        'order_id',
         'user_id',
         'order_date',
         'order_status',
