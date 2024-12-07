@@ -22,7 +22,7 @@ class BasketController extends Controller
         // Get the authenticated user
 
        //$user = Users::query()->where('id', 1)->first();
-       $user = Users::where('id', 1)->first();
+       $user = Auth::user();
 
         if (!$user){return "user not found";}
         

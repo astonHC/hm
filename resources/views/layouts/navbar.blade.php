@@ -68,10 +68,7 @@
                     </div>
                 </form>
 
-                <a
-                    href="{{ route('basket') }}"
-                    class="fas fa-shopping-basket fa-xl hover:text-gray-200"
-                ></a>
+                <a class="fas fa-shopping-basket fa-xl hover:text-gray-200"></a>
 
                 @auth
                 <a
