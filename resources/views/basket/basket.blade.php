@@ -18,7 +18,7 @@
                         <p>quantity: {{$basketItem->quantity}}</p>
                         <form
                             action="{{ route('basket.updateQuantity') }}"
-                            method="get"
+                            method="post"
                         >
                             <input type="text" name="quantity" />
                             <button type="submit">Update quantity</button>
