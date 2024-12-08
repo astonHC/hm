@@ -16,11 +16,13 @@
                         <p>{{ $basketItem->product_name }}</p>
                         <p>Price: {{$basketItem->price}}</p>
                         <p>quantity: {{$basketItem->quantity}}</p>
-                        <button class="bg-ghost-white m-1 rounded">Add</button>
-                        <br />
-                        <button class="bg-ghost-white m-1 rounded">
-                            Minus
-                        </button>
+                        <form
+                            action="{{ route('basket.updateQuantity') }}"
+                            method="get"
+                        >
+                            <input type="text" name="quantity" />
+                            <button type="submit">Update quantity</button>
+                        </form>
                     </div>
                     <br />
                     @endforeach

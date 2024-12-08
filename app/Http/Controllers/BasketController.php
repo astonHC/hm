@@ -22,6 +22,8 @@ class BasketController extends Controller
         
         $basket = Baskets::where('user_id', $user->id)->first();
 
+        
+
          $basketItems = BasketItems::where('basket_id', $basket->id)
             ->join('products','basket_items.product_id','=','products.id')
             ->select(
@@ -38,8 +40,23 @@ class BasketController extends Controller
     {
         $user = Auth::user();
 
+        $newQuantity = $request->input('quantity');
+
+        $basket = Baskets::where('user_id', $user->id)->first();
+
+         $basketItems = BasketItems::where('basket_id', $basket->id)
+            ->join('products','basket_items.product_id','=','products.id')
+            ->select(
+             'basket_items.*', //.* means it selects all basket item fields
+             'products.product_name',
+             'products.description',
+             'products.price'
+            )->get();
+
+        echo $basketItems[0]->product_name;
         
 
+        return view('basket.basket', ['basketItems' => $basketItems]);
 
     }
 

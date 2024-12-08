@@ -68,6 +68,8 @@ Route::get('products',[ProductController::class,'list'])->name('products');
 
     Route::get('basket',[BasketController::class, 'view'])->name('basket.view');
 
-    Route::post('/basket/add/{productID}',[BasketController::class, 'addToBasket'])->name('basket.add');
+    Route::get('basket',[BasketController::class, 'updateQuantity'])->name('basket.updateQuantity');
 
-    Route::delete('/basket/remove/{productID}',[BasketController::class, 'removeFromBasket'])->name('basket.remove');
+    //Route::post('/basket/add/{productID}',[BasketController::class, 'addToBasket'])->name('basket.add');
+
+    //Route::delete('/basket/remove/{productID}',[BasketController::class, 'removeFromBasket'])->name('basket.remove');
