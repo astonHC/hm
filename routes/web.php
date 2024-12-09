@@ -10,6 +10,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SignupController;
 
 use App\Http\Controllers\BasketController;
+use App\Http\Controllers\CheckoutController;
 
 Route::get('/', function () {
     return view('home');
@@ -29,6 +30,8 @@ Route::get('account', [TestController::class, 'account'])->name('account');
 
 
 Route::get('about', [TestController::class, 'about'])->name('about');
+Route::get('checkout', [TestController::class, 'checkout'])->name('checkout');
+
 
 // routes for login page
 // Route::view('/login', 'login.login')->name('login');
@@ -79,3 +82,6 @@ Route::get('products',[ProductController::class,'list'])->name('products');
     //Route::post('/basket/add/{productID}',[BasketController::class, 'addToBasket'])->name('basket.add');
 
     //Route::delete('/basket/remove/{productID}',[BasketController::class, 'removeFromBasket'])->name('basket.remove');
+Route::post('checkout', [CheckoutController::class, 'saveAddress'])->name('checkout.saveaddress');
+Route::post('checkout', [CheckoutController::class, 'placeOrder'])->name('checkout.placeorder');
+
