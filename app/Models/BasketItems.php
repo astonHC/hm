@@ -11,9 +11,9 @@ class BasketItems extends Model
 {
     use HasFactory;
 
-    protected $table = 'baskets';
+    protected $table = 'basket_items';
 
-    protected $primaryKey = 'info_id';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         'basket_id',

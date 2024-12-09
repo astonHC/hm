@@ -12,18 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('basket_items', function (Blueprint $table) {
-            $table->id(); // Single primary key
-            $table->unsignedBigInteger('basket_id');
-            $table->unsignedBigInteger('product_id');
+            $table->id();
+            $table->foreignId('basket_id')->constrained('basket')->onDelete('cascade');
+            $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
             $table->integer('quantity');
+            //$table->unique(['basket_id', 'product_id']);
             $table->timestamps();
-
-            // Define the composite unique constraint
-            $table->unique(['basket_id', 'product_id']);
-
-            // Foreign key constraints
-            $table->foreign('basket_id')->references('id')->on('baskets')->onDelete('cascade');
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });
     }
 
@@ -33,5 +27,6 @@ return new class extends Migration
     public function down(): void
     {
         //
+        Schema::dropIfExists('basket_items');
     }
 };
