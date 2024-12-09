@@ -126,6 +126,7 @@ class BasketController extends Controller
     public function addToBasket(Request $request){
         $user = Auth::user();
         $basket = Basket::where('user_id', $user->id)->first();
+        $productId = $request->input('product_id');
         
         
         if(!$basket){
@@ -134,14 +135,32 @@ class BasketController extends Controller
             ]);
         }
 
+        $basketItems = BasketItems::where('basket_id', $basket->id)
+        ->join('products', 'basket_items.product_id', '=', 'products.id')
+        ->select(
+            'basket_items.*', // Select all basket item fields
+            'products.product_name',
+            'products.description',
+            'products.price'
+        )->get();
 
 
+         $basketItem = $basketItems->where('product_id', $productId)->first();
 
-        BasketItems::Create([
+        if(is_null($basketItem)){
+             BasketItems::Create([
             'basket_id' => $basket->id,
-            'product_id' => $request->input('product_id'),
+            'product_id' => $productId,
             'quantity' => 1
-        ]);
+        ]);  
+        }
+        else{
+            $basketItem->quantity = $basketItem->quantity + 1;
+            $basketItem->save();
+        }
+
+
+       
 
        // echo $request->input('product_id');
 
