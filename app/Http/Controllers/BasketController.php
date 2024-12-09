@@ -51,12 +51,12 @@ class BasketController extends Controller
         ->select('basket_items.*')
         ->first();
 
+        echo $basketItem;
+
 
         
-
-
-        //$basketItem->quantity = $newQuantity;
-        //$basketItem->save();
+        $basketItem->quantity = $request->input('quantity');
+        $basketItem->save();
 
         echo gettype($basketItem);
 
@@ -71,11 +71,6 @@ class BasketController extends Controller
              'products.price'
             )->get();
 
-
-         
-        
-
-        
 
         return view('basket.basket', ['basketItems' => $basketItems]); 
 
