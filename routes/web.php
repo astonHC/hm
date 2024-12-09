@@ -89,5 +89,6 @@ Route::get('products',[ProductController::class,'list'])->name('products');
 Route::get('checkout', [CheckoutController::class, 'view'])->name('checkout.view');  
 
 Route::post('checkout/save-address', [CheckoutController::class, 'storeAddress'])->name('checkout.saveAddress');
+Route::get('checkout/confirmation', [CheckoutController::class, 'confirmation'])->name('checkout.confirmation');
 //Route::post('checkout/save-billing-address', [CheckoutController::class, 'storeAddress'])->name('checkout.saveBillingAddress');
 

@@ -52,7 +52,11 @@ class CheckoutController extends Controller
 
         
 
-        return redirect()->route('home');
+        return redirect()->route('checkout.confirmation');
+    }
+
+    public function confirmation(){
+        return view('checkout.confirmation');
     }
 
     
