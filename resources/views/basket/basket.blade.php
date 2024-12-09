@@ -53,6 +53,14 @@
                     </div>
                 </div>
             </div>
+
+
+        <!--- CHECKOUT BUTTON - LAST MINUTE CODE SO I JUST TOOK THE SIGNUP BUTTON --> 
+
+        <button type="Checkout"
+          class="w-full py-2 px-4 bg-yellow-400 text-white rounded-lg shadow-md hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          Checkout
+        </button>
         </main>
 
         @include('layouts.footer')
