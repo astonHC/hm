@@ -61,7 +61,7 @@ class BasketController extends Controller
         $user = Auth::user();
 
         $newQuantity = $request->input('quantity');
-        $productName = $request->input('product_name');
+        $productId = $request->input('product_id');
 
         $basket = Basket::where('user_id', $user->id)->first();
 
@@ -74,14 +74,19 @@ class BasketController extends Controller
             'products.price'
         )->get();
 
-        $basketItem = $basketItems->where('product_name', "eyeshadow")->first();
+        $basketItem = $basketItems->where('product_id', $productId)->first();
 
 
         
         $basketItem->quantity = $request->input('quantity');
         $basketItem->save();
 
-        echo $basketItem->quantity;
+       
+        echo $productId;
+        
+
+    
+
 
         return view('basket.basket', ['basketItems' => $basketItems]); 
 
