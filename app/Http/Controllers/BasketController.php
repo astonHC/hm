@@ -182,9 +182,9 @@ class BasketController extends Controller
 
     }
 
-    public function toCheckout()
-    {
-        $redirect = Auth::user();
-        return redirect()->route('checkout.view');
-    }
+    //public function toCheckout()
+    //{
+    //    $redirect = Auth::user();
+    //    return redirect()->route('checkout.view');
+    //}
 }

@@ -92,3 +92,8 @@ Route::post('checkout/save-address', [CheckoutController::class, 'storeAddress']
 Route::get('checkout/confirmation', [CheckoutController::class, 'confirmation'])->name('checkout.confirmation');
 //Route::post('checkout/save-billing-address', [CheckoutController::class, 'storeAddress'])->name('checkout.saveBillingAddress');
 
+//Route::get('checkout', [BasketController::class, toCheckout()]->me(heckout.v);
+
+//Route::get('checkout', [BasketController::class, 'view'])->name('checkout.view');
+
+//Route::get('checkout', [BasketController::class, 'view'])->name('checkout.view');
