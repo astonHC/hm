@@ -73,6 +73,8 @@ Route::get('products',[ProductController::class,'list'])->name('products');
 
    Route::post('basket/remove',[BasketController::class, 'removeFromBasket'])->name('basket.remove');
 
+   Route::post('basket/add',[BasketController::class, 'addToBasket'])->name('basket.add');
+
 
     //Route::post('/basket/add/{productID}',[BasketController::class, 'addToBasket'])->name('basket.add');
 

@@ -123,4 +123,33 @@ class BasketController extends Controller
         return redirect()->route('basket.view');
     }
 
+    public function addToBasket(Request $request){
+        $user = Auth::user();
+        $basket = Basket::where('user_id', $user->id)->first();
+        
+        
+        if(!$basket){
+            $basket = Basket::Create([
+                'user_id' => $user->id
+            ]);
+        }
+
+
+
+
+        BasketItems::Create([
+            'basket_id' => $basket->id,
+            'product_id' => $request->input('product_id'),
+            'quantity' => 1
+        ]);
+
+       // echo $request->input('product_id');
+
+    
+         
+
+       return redirect()->route('basket.view');
+
+    }
+
 }
