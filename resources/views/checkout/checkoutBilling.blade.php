@@ -12,7 +12,7 @@
                 <div class="inline-block">
                     <p class="text-6xl">Checkout</p>
                     <form
-                        action="{{ route('checkout.saveAddress') }}"
+                        action="{{ route('checkout.saveBillingAddress') }}"
                         method="post"
                     >
                         @csrf
