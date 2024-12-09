@@ -28,9 +28,18 @@
                     <p class="text-justify">
                         {{ $product->description }}
                     </p>
-                    <button type="button" class="bg-amber w-full">
-                        Add to Basket
-                    </button>
+
+                    <form action="{{ route('basket.add') }}" method="post">
+                        @csrf
+                        <input
+                            type="hidden"
+                            name="product_id"
+                            value="{{ $product->id }}"
+                        />
+                        <button type="submit" class="bg-amber w-full">
+                            Add to Basket
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

@@ -69,7 +69,7 @@
                 </form>
 
                 <a
-                    href="{{ route('basket') }}"
+                    href="{{ route('basket.view') }}"
                     class="fas fa-shopping-basket fa-xl hover:text-gray-200"
                 ></a>
 
