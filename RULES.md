@@ -57,6 +57,3 @@ through with your area's coordinator
 [Backend Coordinator](https://github.com/hazzaaclark)
 
 Feel free to ask in the server if you have any further questions, happy developing and God Bless
-
-
-
