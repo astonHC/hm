@@ -22,6 +22,13 @@ class BasketController extends Controller
         
         $basket = Basket::where('user_id', $user->id)->first();
 
+         if(!$basket){
+            $basket = Basket::Create([
+                'user_id' => $user->id
+            ]);
+        }
+
+
 
         //$basketItems = BasketItems::where('basket_id',$basket->id)->select('basket_items.*')->get();
 
@@ -76,10 +83,16 @@ class BasketController extends Controller
 
         $basketItem = $basketItems->where('product_id', $productId)->first();
 
-
-        
-        $basketItem->quantity = $request->input('quantity');
+        if ($newQuantity == 0) {
+        // Remove the item from the basket
+        $basketItem->delete();
+    } else {
+        // Update the quantity
+        $basketItem->quantity = $newQuantity;
         $basketItem->save();
+    }
+        
+       
 
        
         echo $productId;
