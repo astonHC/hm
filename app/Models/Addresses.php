@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ShippingAddresses extends Model
+class Addresses extends Model
 {
     //
     //use HasFactory;
@@ -13,7 +13,7 @@ class ShippingAddresses extends Model
     
 
     // Define the table if it's not the default 'registers'
-    protected $table = 'shipping_addresses';
+    protected $table = 'addresses';
 
     protected $primaryKey = 'id';
 
@@ -25,6 +25,7 @@ class ShippingAddresses extends Model
         'county',
         'country',
         'post_code',
+        'type',
     ];
 
     // Each address belongs to one user

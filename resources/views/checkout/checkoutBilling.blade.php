@@ -30,7 +30,7 @@
                         <br />
                         <label for="post_code">Post Code</label>
                         <input type="text" name="post_code" required />
-                        <button type="submit">Go To billing info</button>
+                        <button type="submit">Go To Confirmation</button>
                     </form>
                 </div>
             </div>
