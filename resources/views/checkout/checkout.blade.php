@@ -11,7 +11,10 @@
             <div class="flex justify-center m-4">
                 <div class="inline-block">
                     <p class="text-6xl">Checkout</p>
-                    <form method="post">
+                    <form
+                        action="{{ route(checkout.saveAddress) }}"
+                        method="post"
+                    >
                         @csrf
                         <input
                             type="text"

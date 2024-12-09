@@ -84,5 +84,9 @@ Route::get('products',[ProductController::class,'list'])->name('products');
 //Route::post('checkout', [CheckoutController::class, 'saveAddress'])->name('checkout.saveaddress');
 //Route::post('checkout', [CheckoutController::class, 'placeOrder'])->name('checkout.placeorder');
 
-Route::post('checkout', [CheckoutController::class, 'saveAddress'])->name('checkout.saveaddress');
+//Route::post('checkout', [CheckoutController::class, 'saveAddress'])->name('checkout.saveaddress');
+
+Route::get('checkout', [CheckoutController::class, 'view'])->name('checkout.view');  
+
+Route::post('checkout/save-address', [CheckoutController::class, 'saveAddress'])->name('checkout.saveAddress');
 
