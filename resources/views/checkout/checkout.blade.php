@@ -9,10 +9,21 @@
 
         <main>
             <div class="flex justify-center m-4">
-                <p class="text-6xl">Checkout</p>
-                <form method="post">
-                    @csrf<input type="text" name="first_name" value="chungus" />
-                </form>
+                <div class="inline-block">
+                    <p class="text-6xl">Checkout</p>
+                    <form method="post">
+                        @csrf
+                        <input
+                            type="text"
+                            name="first_name"
+                            value="firstName"
+                        />
+                        <br />
+                        <input type="text" name="last_name" value="lastName" />
+                        <br />
+                        <input type="text" name="last_name" value="lastName" />
+                    </form>
+                </div>
             </div>
         </main>
 
