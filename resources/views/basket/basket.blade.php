@@ -21,13 +21,27 @@
                             method="post"
                         >
                             @csrf
-                            <input type="text" name="quantity" />
+                            <input type="text" name="quantity" required />
                             <input
                                 type="hidden"
                                 name="product_id"
                                 value="{{ $basketItem->product_id }}"
                             />
+                            <br />
                             <button type="submit">Update quantity</button>
+                            <br />
+                        </form>
+                        <form
+                            action="{{ route('basket.remove') }}"
+                            method="post"
+                        >
+                            @csrf
+                            <input
+                                type="hidden"
+                                name="product_id"
+                                value="{{ $basketItem->product_id }}"
+                            />
+                            <button type="submit">remove</button>
                         </form>
                     </div>
                     <br />

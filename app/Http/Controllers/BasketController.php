@@ -84,12 +84,43 @@ class BasketController extends Controller
        
         echo $productId;
         
+        //return view('basket.basket', ['basketItems' => $basketItems]); 
 
+        return redirect()->route('basket.view');
+
+    }
+
+    public function removeFromBasket(Request $request){
+        $user = Auth::user();
+
+        $newQuantity = $request->input('quantity');
+        $productId = $request->input('product_id');
+
+        $basket = Basket::where('user_id', $user->id)->first();
+
+       $basketItems = BasketItems::where('basket_id', $basket->id)
+        ->join('products', 'basket_items.product_id', '=', 'products.id')
+        ->select(
+            'basket_items.*', // Select all basket item fields
+            'products.product_name',
+            'products.description',
+            'products.price'
+        )->get();
+
+        $basketItem = $basketItems->where('product_id', $productId)->first();
+
+
+        
+        //$basketItem->quantity = $request->input('quantity');
+        //$basketItem->save();
+
+        
+        $basketItem->delete();
+        
     
+        //return view('basket.basket', ['basketItems' => $basketItems]); 
 
-
-        return view('basket.basket', ['basketItems' => $basketItems]); 
-
+        return redirect()->route('basket.view');
     }
 
 }
