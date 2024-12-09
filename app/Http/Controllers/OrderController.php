@@ -67,6 +67,5 @@ class OrderController extends Controller
         echo $orders[0]->orderItems[0]->products->product_name;
 
     return view('orders.orders', ['orders' => $orders]);
-
     }
 } 
