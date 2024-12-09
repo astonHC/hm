@@ -20,7 +20,13 @@
                             action="{{ route('basket.updateQuantity') }}"
                             method="post"
                         >
+                            @csrf
                             <input type="text" name="quantity" />
+                            <input
+                                type="hidden"
+                                name="product_id"
+                                value="{{ $basketItem->product_id }}"
+                            />
                             <button type="submit">Update quantity</button>
                         </form>
                     </div>

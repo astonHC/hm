@@ -68,7 +68,9 @@ Route::get('products',[ProductController::class,'list'])->name('products');
 
     Route::get('basket',[BasketController::class, 'view'])->name('basket.view');
 
-    Route::post('basket',[BasketController::class, 'updateQuantity'])->name('basket.updateQuantity');
+   // Route::get('basket',[BasketController::class, 'updateQuantity'])->name('basket.updateQuantity');
+   Route::post('basket',[BasketController::class, 'updateQuantity'])->name('basket.updateQuantity');
+
 
     //Route::post('/basket/add/{productID}',[BasketController::class, 'addToBasket'])->name('basket.add');
 
